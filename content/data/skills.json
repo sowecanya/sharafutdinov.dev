@@ -13,7 +13,7 @@
         },
         {
           "name": "Python",
-          "tags": ["NumPy", "Pandas", "FastAPI", "aiogram"]
+          "tags": ["NumPy", "Pandas", "Matplotlib", "FastAPI", "aiogram"]
         },
         {
           "name": "TypeScript",
@@ -51,6 +51,10 @@
         {
           "name": "Navisworks",
           "tags": ["Coordination", "Clash detection"]
+        },
+        {
+          "name": "Dynamo",
+          "tags": ["Visual scripting", "Automation"]
         }
       ]
     },
@@ -133,8 +137,16 @@
           "tags": ["C#", ".NET"]
         },
         {
+          "name": "PyCharm",
+          "tags": ["Python", "Django"]
+        },
+        {
           "name": "VS Code",
-          "tags": ["TypeScript", "Python"]
+          "tags": ["TypeScript", "Lightweight"]
+        },
+        {
+          "name": "Windows Terminal",
+          "tags": ["CLI", "PowerShell"]
         },
         {
           "name": "Excel / Google Sheets",
