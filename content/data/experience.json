@@ -26,15 +26,15 @@
         "ru": "MARKS GROUP"
       },
       "startDate": "2024-02-01",
-      "endDate": "2025-02-01",
+      "endDate": "2025-09-01",
       "progression": [
         {
           "role": {
             "en": "Senior Design Engineer (Category I)",
             "ru": "Ведущий инженер-проектировщик (I категория)"
           },
-          "startDate": "2024-06-01",
-          "endDate": "2025-02-01",
+          "startDate": "2025-06-01",
+          "endDate": "2025-09-01",
           "responsibilities": {
             "en": [
               "Led complex engineering solutions and systems integration",
@@ -55,8 +55,8 @@
             "en": "Design Engineer (Category II)",
             "ru": "Инженер-проектировщик (II категория)"
           },
-          "startDate": "2024-04-01",
-          "endDate": "2024-06-01",
+          "startDate": "2024-11-01",
+          "endDate": "2025-06-01",
           "responsibilities": {
             "en": [
               "Advanced Revit modeling and configuration",
@@ -76,7 +76,7 @@
             "ru": "Инженер-проектировщик (III категория)"
           },
           "startDate": "2024-02-01",
-          "endDate": "2024-04-01",
+          "endDate": "2024-11-01",
           "responsibilities": {
             "en": [
               "Design documentation for Automation and Dispatching",
