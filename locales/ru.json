@@ -14,13 +14,15 @@
     "description": "Изменить тему и язык"
   },
   "common": {
-    "close": "Закрыть"
+    "close": "Закрыть",
+    "opensNewTab": "откроется в новой вкладке"
   },
   "home": {
     "valueProp": "Создаю инструменты продуктивности для AEC-индустрии",
     "tags": "Revit API • Инженерные семейства • AI в разработке",
     "viewProjects": "Проекты",
     "getInTouch": "Связаться",
+    "skills": "Навыки",
     "recentProjects": "Последние проекты",
     "viewAllProjects": "Все проекты",
     "latestWork": "Последние работы",
@@ -85,7 +87,8 @@
     "bookTimeDesc": "Для консультации удобнее созвониться",
     "book": "Забронировать",
     "stayInTouch": "Связаться",
-    "stayInTouchDesc": "Активнее всего в Telegram"
+    "stayInTouchDesc": "Активнее всего в Telegram",
+    "elsewhere": "Ещё"
   },
   "skills": {
     "title": "Навыки",
