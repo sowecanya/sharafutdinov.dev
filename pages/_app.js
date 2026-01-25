@@ -5,7 +5,6 @@ import Menu from "../components/menu";
 import { Toaster } from "react-hot-toast";
 import React from "react";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { LanguageProvider } from "../lib/i18n";
 
 function MyApp({ Component, pageProps }) {
@@ -30,7 +29,6 @@ function MyApp({ Component, pageProps }) {
         <Menu />
         <Component {...pageProps} />
         <Analytics />
-        <SpeedInsights />
       </ThemeProvider>
     </LanguageProvider>
   );
