@@ -1,7 +1,6 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
-import ContactContent from "../components/contactContent";
 import ExpTile from "../components/tiles/expTile";
 import profile from "../content/data/profile.json";
 import experienceData from "../content/data/experience.json";
@@ -13,29 +12,59 @@ import styles from "../styles/story.module.css";
 // Format date range and calculate duration
 function formatDateRange(startDate, endDate, locale) {
   const months = {
-    en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    ru: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+    en: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ],
+    ru: [
+      "Январь",
+      "Февраль",
+      "Март",
+      "Апрель",
+      "Май",
+      "Июнь",
+      "Июль",
+      "Август",
+      "Сентябрь",
+      "Октябрь",
+      "Ноябрь",
+      "Декабрь",
+    ],
   };
-  
+
   const start = new Date(startDate);
   const end = endDate ? new Date(endDate) : new Date();
-  
+
   const startStr = `${months[locale][start.getMonth()]} ${start.getFullYear()}`;
-  const endStr = endDate 
+  const endStr = endDate
     ? `${months[locale][end.getMonth()]} ${end.getFullYear()}`
-    : (locale === "ru" ? "настоящее время" : "Present");
-  
+    : locale === "ru"
+      ? "настоящее время"
+      : "Present";
+
   // Calculate duration
-  let totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+  let totalMonths =
+    (end.getFullYear() - start.getFullYear()) * 12 +
+    (end.getMonth() - start.getMonth());
   if (end.getDate() >= start.getDate()) totalMonths += 1;
-  
+
   const years = Math.floor(totalMonths / 12);
   const remainingMonths = totalMonths % 12;
-  
+
   let duration = "";
   if (locale === "ru") {
     if (years > 0) {
-      const yearWord = years === 1 ? "год" : (years < 5 ? "года" : "лет");
+      const yearWord = years === 1 ? "год" : years < 5 ? "года" : "лет";
       duration += `${years} ${yearWord}`;
     }
     if (remainingMonths > 0) {
@@ -51,7 +80,7 @@ function formatDateRange(startDate, endDate, locale) {
       duration += `${remainingMonths} mo`;
     }
   }
-  
+
   return `${startStr} – ${endStr} · ${duration}`;
 }
 
@@ -89,12 +118,7 @@ export default function About() {
           <div className={util.inset}>
             <div className={util.read}>
               <p>{localize(profile.bio)}</p>
-            </div>
-            <div className={util.inset} style={{ marginBottom: "4rem" }}>
-              <ContactContent />
-            </div>
-            <div className={util.read}>
-              <h2 style={{ margin: "4rem 0rem 0.25rem 0rem" }}>
+              <h2 style={{ margin: "2rem 0rem 0.25rem 0rem" }}>
                 {t("about.moreAboutMe")}
               </h2>
             </div>
@@ -167,9 +191,11 @@ export default function About() {
                       {localize(block.title)}
                     </h3>
                     <div className={styles.blockContent}>
-                      {localize(block.content).split('\n\n').map((paragraph, pIndex) => (
-                        <p key={pIndex}>{paragraph}</p>
-                      ))}
+                      {localize(block.content)
+                        .split("\n\n")
+                        .map((paragraph, pIndex) => (
+                          <p key={pIndex}>{paragraph}</p>
+                        ))}
                     </div>
                   </section>
                 ))}
