@@ -1,64 +1,6 @@
 {
   "categories": [
     {
-      "id": "fundamentals",
-      "title": {
-        "en": "CS Fundamentals",
-        "ru": "Основы CS"
-      },
-      "items": [
-        {
-          "name": "Algorithms & Data Structures",
-          "tags": ["Arrays", "Trees", "Graphs", "Sorting", "Dynamic Programming", "LeetCode"]
-        },
-        {
-          "name": "Design Principles",
-          "tags": ["SOLID", "KISS", "DRY", "YAGNI", "Composition over Inheritance"]
-        },
-        {
-          "name": "Architecture Patterns",
-          "tags": ["Clean Architecture", "MVC", "MVVM", "Repository", "DI/IoC"]
-        },
-        {
-          "name": "Design Patterns",
-          "tags": ["Factory", "Singleton", "Observer", "Strategy", "Decorator"]
-        },
-        {
-          "name": "System Design",
-          "tags": ["API Design", "Microservices", "Caching", "Load Balancing"]
-        }
-      ]
-    },
-    {
-      "id": "programming",
-      "title": {
-        "en": "Programming Languages",
-        "ru": "Языки программирования"
-      },
-      "items": [
-        {
-          "name": "C#",
-          "tags": [".NET", "WPF", "LINQ", "Revit API"]
-        },
-        {
-          "name": "Python",
-          "tags": ["NumPy", "Pandas", "Matplotlib", "FastAPI", "aiogram"]
-        },
-        {
-          "name": "TypeScript",
-          "tags": ["Next.js", "React"]
-        },
-        {
-          "name": "Kotlin",
-          "tags": ["Android", "Mobile apps"]
-        },
-        {
-          "name": "SQL",
-          "tags": ["PostgreSQL", "SQLite"]
-        }
-      ]
-    },
-    {
       "id": "bim",
       "title": {
         "en": "BIM & CAD",
@@ -67,69 +9,48 @@
       "items": [
         {
           "name": "Autodesk Revit",
-          "tags": ["Parametric families", "Lookup tables", "Library management"]
+          "tags": ["Parametric families", "Lookup tables", "Library management", "Coordination"]
         },
         {
           "name": "Revit API",
           "tags": ["C# plugins", "Automation", "Custom tools"]
         },
         {
-          "name": "AutoCAD",
-          "tags": ["Documentation", "2D drafting"]
-        },
-        {
           "name": "Navisworks",
-          "tags": ["Coordination", "Clash detection"]
+          "tags": ["Clash detection", "4D simulation", "Coordination"]
         },
         {
           "name": "Dynamo",
-          "tags": ["Visual scripting", "Automation"]
+          "tags": ["Visual scripting", "Automation", "Data extraction"]
+        },
+        {
+          "name": "AutoCAD",
+          "tags": ["2D drafting", "Documentation"]
         }
       ]
     },
     {
-      "id": "devops",
+      "id": "programming",
       "title": {
-        "en": "DevOps & Infrastructure",
-        "ru": "DevOps и инфраструктура"
+        "en": "Programming",
+        "ru": "Программирование"
       },
       "items": [
         {
-          "name": "Docker",
-          "tags": ["Compose", "Multi-stage builds"]
+          "name": "C#",
+          "tags": [".NET", "Revit API", "WPF", "LINQ"]
         },
         {
-          "name": "Git",
-          "tags": ["GitHub", "Version control"]
+          "name": "Python",
+          "tags": ["FastAPI", "aiogram", "Pandas", "Automation"]
         },
         {
-          "name": "Linux",
-          "tags": ["SSH", "Bash", "CLI"]
+          "name": "TypeScript",
+          "tags": ["Next.js", "React", "Node.js"]
         },
         {
-          "name": "Vercel",
-          "tags": ["CI/CD", "Deployments"]
-        }
-      ]
-    },
-    {
-      "id": "databases",
-      "title": {
-        "en": "Databases",
-        "ru": "Базы данных"
-      },
-      "items": [
-        {
-          "name": "PostgreSQL",
-          "tags": ["Relational design", "Queries"]
-        },
-        {
-          "name": "SQLite",
-          "tags": ["Local storage", "Mobile"]
-        },
-        {
-          "name": "Supabase",
-          "tags": ["Auth", "Realtime", "BaaS"]
+          "name": "SQL",
+          "tags": ["PostgreSQL", "Queries", "Data modeling"]
         }
       ]
     },
@@ -142,48 +63,65 @@
       "items": [
         {
           "name": "Claude Code",
-          "tags": ["Multi-agent", "Custom skills", "Daily driver"]
-        },
-        {
-          "name": "Cursor",
-          "tags": ["AI IDE", "Code generation"]
+          "tags": ["Multi-agent workflows", "Custom skills", "Daily driver"]
         },
         {
           "name": "Prompt Engineering",
-          "tags": ["LLM integration", "OpenAI API"]
+          "tags": ["LLM integration", "OpenAI API", "System prompts"]
+        },
+        {
+          "name": "Cursor / AI IDEs",
+          "tags": ["AI-assisted coding", "Code generation"]
         }
       ]
     },
     {
-      "id": "tools",
+      "id": "fundamentals",
       "title": {
-        "en": "Tools & Productivity",
-        "ru": "Инструменты"
+        "en": "Software Engineering",
+        "ru": "Разработка ПО"
       },
       "items": [
         {
-          "name": "Visual Studio",
-          "tags": ["C#", ".NET"]
+          "name": "Architecture",
+          "tags": ["Clean Architecture", "MVC", "MVVM", "Repository pattern"]
         },
         {
-          "name": "PyCharm",
-          "tags": ["Python", "Django"]
+          "name": "Design Principles",
+          "tags": ["SOLID", "KISS", "DRY", "YAGNI"]
         },
         {
-          "name": "VS Code",
-          "tags": ["TypeScript", "Lightweight"]
+          "name": "Design Patterns",
+          "tags": ["Factory", "Singleton", "Observer", "Strategy"]
         },
         {
-          "name": "Windows Terminal",
-          "tags": ["CLI", "PowerShell"]
+          "name": "Algorithms",
+          "tags": ["Data Structures", "Complexity", "Problem solving"]
+        }
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "title": {
+        "en": "Infrastructure",
+        "ru": "Инфраструктура"
+      },
+      "items": [
+        {
+          "name": "Git & GitHub",
+          "tags": ["Version control", "CI/CD", "Collaboration"]
         },
         {
-          "name": "Excel / Google Sheets",
-          "tags": ["Data analysis", "Automation"]
+          "name": "Docker",
+          "tags": ["Containers", "Compose", "Deployment"]
         },
         {
-          "name": "Notion",
-          "tags": ["Project management"]
+          "name": "Databases",
+          "tags": ["PostgreSQL", "Supabase", "SQLite"]
+        },
+        {
+          "name": "Linux & Cloud",
+          "tags": ["SSH", "Bash", "Vercel", "VPS"]
         }
       ]
     }
