@@ -26,7 +26,7 @@ export default function Skills() {
     <>
       <Head>
         <title>
-          {profile.name} · {t("skills.title")}
+          {localize(profile.name)} · {t("skills.title")}
         </title>
         <meta name="description" content={t("skills.description")} />
         <link rel="icon" href="/favicon.gif" />
