@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
+    "skills": "Skills",
     "contact": "Contact",
     "stayInTouch": "Stay in touch"
   },
@@ -23,9 +24,20 @@
     "moreAboutMe": "More about me",
     "tabs": {
       "career": "Career",
+      "education": "Education",
+      "story": "Story",
       "aboutSite": "About This Site"
     },
     "siteDescription": "This site is built with Next.js and deployed on Vercel. Content is managed through local JSON files. Radix UI is used for front-end components. Next Themes made light/dark-mode management easy."
+  },
+  "education": {
+    "degree": "Degree",
+    "certifications": "Certifications",
+    "gpa": "GPA"
+  },
+  "story": {
+    "shortTerm": "Short-term",
+    "longTerm": "Long-term"
   },
   "projects": {
     "title": "Projects",
@@ -49,6 +61,10 @@
     "book": "Book",
     "stayInTouch": "Stay in touch",
     "stayInTouchDesc": "I'm most active on Telegram"
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "Technologies and tools I work with daily."
   },
   "tooltip": {
     "press": "Press"

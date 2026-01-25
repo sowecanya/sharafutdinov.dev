@@ -1,0 +1,38 @@
+{
+  "degree": {
+    "institution": {
+      "en": "Ufa State Petroleum Technological University",
+      "ru": "Уфимский государственный нефтяной технический университет"
+    },
+    "degree": {
+      "en": "Bachelor's Degree — Automation Engineer",
+      "ru": "Бакалавр — Инженер по автоматизации"
+    },
+    "years": "2019 – 2023",
+    "gpa": "4.23 / 5.0",
+    "location": {
+      "en": "Ufa, Russia",
+      "ru": "Уфа, Россия"
+    }
+  },
+  "certifications": [
+    {
+      "id": "bim-manager",
+      "title": {
+        "en": "BIM Manager: Administration and Collaboration",
+        "ru": "BIM-менеджер: администрирование и коллаборация"
+      },
+      "issuer": "Vysotskiy Consulting",
+      "year": "2025"
+    },
+    {
+      "id": "revit-quickstart",
+      "title": {
+        "en": "Quick Start in Revit",
+        "ru": "Быстрый старт в Revit"
+      },
+      "issuer": "Vysotskiy Consulting",
+      "year": "2024"
+    }
+  ]
+}

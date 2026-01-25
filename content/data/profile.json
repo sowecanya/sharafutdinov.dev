@@ -1,22 +1,23 @@
 {
   "name": "Dinar Sharafutdinov",
   "title": {
-    "en": "Software Engineer",
-    "ru": "Программист"
+    "en": "BIM Coordinator & .NET Developer",
+    "ru": "BIM-координатор и .NET-разработчик"
   },
   "bio": {
-    "en": "I'm a software engineer passionate about building great products. Welcome to my corner of the internet.",
-    "ru": "Программист, увлечённый созданием отличных продуктов. Добро пожаловать в мой уголок интернета."
+    "en": "BIM Coordinator and .NET Developer specializing in Revit automation, engineering family development, and BIM workflows optimization. Building productivity tools for AEC industry. Passionate about AI-assisted development — actively using Claude Code with custom multi-agent workflows.",
+    "ru": "BIM-координатор и .NET-разработчик. Специализируюсь на автоматизации Revit, разработке инженерных семейств и оптимизации BIM-процессов. Создаю инструменты продуктивности для AEC-индустрии. Активно использую AI в разработке — Claude Code с кастомными мульти-агентными воркфлоу."
   },
   "description": {
-    "en": "Personal portfolio and projects showcase.",
-    "ru": "Персональное портфолио и проекты."
+    "en": "Personal portfolio — BIM, Development, AI",
+    "ru": "Персональное портфолио — BIM, Разработка, AI"
   },
   "social": {
     "github": "https://github.com/sowecanya",
-    "telegram": "",
-    "linkedin": "",
+    "telegram": "https://t.me/sowecanya",
+    "linkedin": "https://www.linkedin.com/in/sowecanya",
     "twitter": ""
   },
-  "email": ""
+  "email": "sowecanya@gmail.com",
+  "location": "Russia"
 }

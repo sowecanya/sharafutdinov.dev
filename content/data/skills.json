@@ -1,0 +1,138 @@
+{
+  "categories": [
+    {
+      "id": "programming",
+      "title": {
+        "en": "Programming Languages",
+        "ru": "Языки программирования"
+      },
+      "items": [
+        {
+          "name": "C#",
+          "tags": [".NET 4.8", "WPF", "Revit plugins", "Desktop apps"]
+        },
+        {
+          "name": "Python",
+          "tags": ["FastAPI", "aiogram 3.x", "Pydantic", "Async"]
+        },
+        {
+          "name": "TypeScript",
+          "tags": ["Next.js", "React", "Node.js"]
+        }
+      ]
+    },
+    {
+      "id": "bim",
+      "title": {
+        "en": "BIM & CAD",
+        "ru": "BIM и САПР"
+      },
+      "items": [
+        {
+          "name": "Autodesk Revit",
+          "tags": ["Parametric families", "Lookup tables", "Library management"]
+        },
+        {
+          "name": "Revit API",
+          "tags": ["C# plugins", "Automation", "Custom tools"]
+        },
+        {
+          "name": "AutoCAD",
+          "tags": ["Documentation", "2D drafting"]
+        },
+        {
+          "name": "Navisworks",
+          "tags": ["Coordination", "Clash detection"]
+        }
+      ]
+    },
+    {
+      "id": "devops",
+      "title": {
+        "en": "DevOps & Infrastructure",
+        "ru": "DevOps и инфраструктура"
+      },
+      "items": [
+        {
+          "name": "Docker",
+          "tags": ["Compose", "Multi-stage builds"]
+        },
+        {
+          "name": "GitHub Actions",
+          "tags": ["CI/CD", "Automated testing"]
+        },
+        {
+          "name": "Vercel",
+          "tags": ["Next.js deployments"]
+        },
+        {
+          "name": "Git",
+          "tags": ["Conventional commits", "Branching strategies"]
+        }
+      ]
+    },
+    {
+      "id": "databases",
+      "title": {
+        "en": "Databases",
+        "ru": "Базы данных"
+      },
+      "items": [
+        {
+          "name": "PostgreSQL",
+          "tags": ["Relational design", "Queries"]
+        },
+        {
+          "name": "Supabase",
+          "tags": ["Auth", "Realtime", "Storage"]
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": {
+        "en": "AI & Emerging Technologies",
+        "ru": "AI и новые технологии"
+      },
+      "items": [
+        {
+          "name": "Claude Code",
+          "tags": ["Custom skills", "Multi-agent pipelines", "Daily driver"]
+        },
+        {
+          "name": "Cursor",
+          "tags": ["AI-powered IDE"]
+        },
+        {
+          "name": "Prompt Engineering",
+          "tags": ["LLM integration", "OpenAI API"]
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": {
+        "en": "Tools & Frameworks",
+        "ru": "Инструменты и фреймворки"
+      },
+      "items": [
+        {
+          "name": "Visual Studio",
+          "tags": ["C#", ".NET development"]
+        },
+        {
+          "name": "VS Code",
+          "tags": ["TypeScript", "Python"]
+        },
+        {
+          "name": "Figma",
+          "tags": ["UI basics", "Prototyping"]
+        },
+        {
+          "name": "Notion",
+          "tags": ["Project management"]
+        }
+      ]
+    }
+  ]
+}

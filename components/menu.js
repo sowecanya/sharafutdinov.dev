@@ -28,6 +28,12 @@ export default function Menu() {
             label={t("nav.projects")}
             shortcut="3"
           />
+          <NavLink
+            svg="skills"
+            href="/skills"
+            label={t("nav.skills")}
+            shortcut="4"
+          />
           <p className={styles.divider}>{t("nav.stayInTouch")}</p>
           <Contact svg="chat" label={t("nav.contact")} shortcut="/" />
         </nav>

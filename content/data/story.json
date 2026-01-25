@@ -1,0 +1,77 @@
+{
+  "background": {
+    "title": {
+      "en": "Background",
+      "ru": "История"
+    },
+    "content": {
+      "en": "I came to BIM after working as a design engineer, attracted by the opportunity to grow into development rather than stay in one place. I've been coding since 17 — starting with a C# + Unity game prototype, then a mobile app on Kotlin for my diploma. Looking back, the tech choices weren't perfect, but the drive to code was always there.",
+      "ru": "Пришёл в BIM после работы проектировщиком. Привлекла возможность расти в разработку, а не застрять на одном месте. Программирую с 17 лет — начинал с игры на C# + Unity, потом мобильное приложение на Kotlin в дипломе. Оглядываясь назад, технологии были не идеальны, но тяга к коду была всегда."
+    }
+  },
+  "drives": {
+    "title": {
+      "en": "What Drives Me",
+      "ru": "Что меня мотивирует"
+    },
+    "items": {
+      "en": [
+        "Automating manual work that can be automated",
+        "Constant growth and learning",
+        "Working with motivated teams that energize each other",
+        "Remote work and location freedom"
+      ],
+      "ru": [
+        "Автоматизация ручной работы",
+        "Постоянное развитие и обучение",
+        "Работа в мотивированных командах",
+        "Удалённая работа и свобода локации"
+      ]
+    }
+  },
+  "goals": {
+    "title": {
+      "en": "Where I'm Heading",
+      "ru": "Куда иду"
+    },
+    "shortTerm": {
+      "period": "2026",
+      "items": {
+        "en": [
+          "Build working Revit plugins from real pain points",
+          "2-3 polished projects on GitHub",
+          "Transition from Coordinator to Developer role"
+        ],
+        "ru": [
+          "Создать рабочие плагины Revit из реальных проблем",
+          "2-3 проекта на GitHub с документацией",
+          "Переход из координатора в разработчика"
+        ]
+      }
+    },
+    "longTerm": {
+      "items": {
+        "en": [
+          "BIM Developer position (1-2 years)",
+          "\"AI-Powered BIM Automation\" specialist",
+          "Own products at BIM + AI intersection"
+        ],
+        "ru": [
+          "Позиция BIM-разработчика (1-2 года)",
+          "Специалист по AI-автоматизации в BIM",
+          "Свои продукты на пересечении BIM и AI"
+        ]
+      }
+    }
+  },
+  "uniquePositioning": {
+    "en": "BIM domain expertise + AI/LLM capabilities = rare combination in the market",
+    "ru": "Экспертиза в BIM + возможности AI/LLM = редкая комбинация на рынке"
+  },
+  "quote": {
+    "text": {
+      "en": "AI is like electricity once was. Some still use candles, while others flip the switch and don't waste time on empty work.",
+      "ru": "AI — это как электричество когда-то. Есть те, кто сидят со свечками, а есть те, кто нажимает на выключатель и не тратит время на пустую работу."
+    }
+  }
+}

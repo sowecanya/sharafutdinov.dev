@@ -1,22 +1,42 @@
 {
   "items": [
     {
-      "id": "1",
+      "id": "r1",
       "company": {
-        "en": "Your Company",
-        "ru": "Ваша Компания"
+        "en": "R1",
+        "ru": "R1"
       },
       "role": {
-        "en": "Software Engineer",
-        "ru": "Программист"
+        "en": "BIM Coordinator",
+        "ru": "BIM-координатор"
       },
       "date": {
-        "en": "2023 - Present",
-        "ru": "2023 - настоящее время"
+        "en": "Feb 2025 – Present",
+        "ru": "Февраль 2025 – настоящее время"
       },
       "description": {
-        "en": "Building great products.",
-        "ru": "Создание отличных продуктов."
+        "en": "Development of Revit engineering families (parametric, lookup tables). Library management and optimization. Consulting and supporting design engineers in Revit workflows. BIM coordination and quality control.",
+        "ru": "Разработка инженерных семейств Revit (параметрические, таблицы подстановки). Управление и оптимизация библиотек. Консультирование проектировщиков по работе в Revit. BIM-координация и контроль качества."
+      },
+      "url": ""
+    },
+    {
+      "id": "marks",
+      "company": {
+        "en": "MARKS GROUP",
+        "ru": "MARKS GROUP"
+      },
+      "role": {
+        "en": "Automation Design Engineer",
+        "ru": "Инженер-проектировщик автоматизации"
+      },
+      "date": {
+        "en": "2024 – Feb 2025",
+        "ru": "2024 – Февраль 2025"
+      },
+      "description": {
+        "en": "Design and construction documentation for Automation and Dispatching Systems. Projects: civil buildings and metro infrastructure. Coordination with HVAC, Electrical, Plumbing, Fire Protection teams.",
+        "ru": "Рабочая документация по автоматизации и диспетчеризации. Проекты: гражданские здания и объекты метро. Координация со смежными разделами (ОВ, ЭОМ, ВК, ПБ)."
       },
       "url": ""
     }
