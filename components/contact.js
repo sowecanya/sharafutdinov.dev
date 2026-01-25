@@ -1,5 +1,5 @@
 import styles from "../components/contact.module.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import * as Dialog from "@radix-ui/react-dialog";
 import util from "../styles/util.module.css";
@@ -7,22 +7,25 @@ import ContactContent from "./contactContent";
 import * as Tooltip from "@radix-ui/react-tooltip";
 
 export default function Contact({ svg, label, shortcut }) {
-  var time = 0;
+  const timeRef = useRef(0);
 
   useEffect(() => {
-    setInterval(function () {
-      time++;
+    const interval = setInterval(function () {
+      timeRef.current++;
     }, 200);
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
-    document.addEventListener("keypress", function (event) {
-      if (event.key === shortcut && time > 1) {
+    function handleKeyPress(event) {
+      if (event.key === shortcut && timeRef.current > 1) {
         document.getElementById("contactTrigger").click();
-        time = 0;
+        timeRef.current = 0;
       }
-    });
-  });
+    }
+    document.addEventListener("keypress", handleKeyPress);
+    return () => document.removeEventListener("keypress", handleKeyPress);
+  }, [shortcut]);
 
   return (
     <Dialog.Root>
