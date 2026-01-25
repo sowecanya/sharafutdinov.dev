@@ -20,7 +20,15 @@
     "valueProp": "Building productivity tools for AEC industry",
     "tags": "Revit API • Family Development • AI-assisted workflows",
     "viewProjects": "View Projects",
-    "getInTouch": "Get in Touch"
+    "getInTouch": "Get in Touch",
+    "philosophy": {
+      "line1": "Automation first.",
+      "line2": "Human friendly.",
+      "line3": "Ship fast.",
+      "caption": "— My approach to BIM tools development"
+    },
+    "latestWork": "Latest Work",
+    "bio": "Bio"
   },
   "about": {
     "title": "About",
