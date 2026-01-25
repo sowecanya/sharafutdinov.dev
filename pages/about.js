@@ -10,8 +10,54 @@ import storyData from "../content/data/story.json";
 import { useTranslation } from "../lib/i18n";
 import styles from "../styles/story.module.css";
 
+// Format date range and calculate duration
+function formatDateRange(startDate, endDate, locale) {
+  const months = {
+    en: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    ru: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"]
+  };
+  
+  const start = new Date(startDate);
+  const end = endDate ? new Date(endDate) : new Date();
+  
+  const startStr = `${months[locale][start.getMonth()]} ${start.getFullYear()}`;
+  const endStr = endDate 
+    ? `${months[locale][end.getMonth()]} ${end.getFullYear()}`
+    : (locale === "ru" ? "настоящее время" : "Present");
+  
+  // Calculate duration
+  let totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+  if (end.getDate() >= start.getDate()) totalMonths += 1;
+  
+  const years = Math.floor(totalMonths / 12);
+  const remainingMonths = totalMonths % 12;
+  
+  let duration = "";
+  if (locale === "ru") {
+    if (years > 0) {
+      const yearWord = years === 1 ? "год" : (years < 5 ? "года" : "лет");
+      duration += `${years} ${yearWord}`;
+    }
+    if (remainingMonths > 0) {
+      if (years > 0) duration += " ";
+      const monthWord = remainingMonths === 1 ? "мес" : "мес";
+      duration += `${remainingMonths} ${monthWord}`;
+    }
+  } else {
+    if (years > 0) {
+      duration += `${years} yr${years > 1 ? "s" : ""}`;
+    }
+    if (remainingMonths > 0) {
+      if (years > 0) duration += " ";
+      duration += `${remainingMonths} mo`;
+    }
+  }
+  
+  return `${startStr} – ${endStr} · ${duration}`;
+}
+
 export default function About() {
-  const { t, localize } = useTranslation();
+  const { t, localize, locale } = useTranslation();
   const tabKeys = ["career", "education", "story"];
   const [activeTab, setActiveTab] = React.useState(tabKeys[0]);
 
@@ -73,7 +119,7 @@ export default function About() {
                 {experienceData.items.map((item) => (
                   <ExpTile
                     key={item.id}
-                    date={localize(item.date)}
+                    date={formatDateRange(item.startDate, item.endDate, locale)}
                     title={`${localize(item.role)} @ ${localize(item.company)}`}
                     url={item.url}
                     content={localize(item.description)}
