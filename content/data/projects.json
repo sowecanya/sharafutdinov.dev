@@ -1,21 +1,59 @@
 {
   "items": [
     {
-      "id": "1",
+      "id": "dstools",
       "title": {
-        "en": "Project One",
-        "ru": "Проект Один"
+        "en": "DSTools — Revit Plugins Platform",
+        "ru": "DSTools — Платформа плагинов для Revit"
       },
       "description": {
-        "en": "Description of your first project.",
-        "ru": "Описание вашего первого проекта."
+        "en": "A suite of productivity plugins for Autodesk Revit aimed at MEP engineers and BIM coordinators. Features: Ribbon integration, WPF interface, Excel export. Built with Claude Code using custom multi-agent workflows.",
+        "ru": "Набор плагинов продуктивности для Autodesk Revit для MEP-инженеров и BIM-координаторов. Функции: интеграция в Ribbon, WPF-интерфейс, экспорт в Excel. Разработано с Claude Code и мульти-агентными воркфлоу."
       },
-      "image": "project-placeholder",
+      "image": "",
+      "type": {
+        "en": "Desktop · Revit Plugin",
+        "ru": "Десктоп · Плагин Revit"
+      },
+      "date": "2024-01-01",
+      "url": "",
+      "internal": false
+    },
+    {
+      "id": "portfolio",
+      "title": {
+        "en": "sharafutdinov.dev",
+        "ru": "sharafutdinov.dev"
+      },
+      "description": {
+        "en": "Personal portfolio website with modern stack and AI-assisted development pipeline. Features: i18n, dark mode, responsive design.",
+        "ru": "Персональный сайт-портфолио с современным стеком и AI-пайплайном разработки. Фичи: i18n, тёмная тема, адаптивный дизайн."
+      },
+      "image": "",
       "type": {
         "en": "Web · Side Project",
         "ru": "Веб · Личный проект"
       },
-      "date": "2024-01-01",
+      "date": "2025-01-01",
+      "url": "https://github.com/sowecanya/sharafutdinov.dev",
+      "internal": false
+    },
+    {
+      "id": "awardybot",
+      "title": {
+        "en": "AwardyBot (Contributor)",
+        "ru": "AwardyBot (Контрибьютор)"
+      },
+      "description": {
+        "en": "AI-native cashback platform for Russian marketplaces (Wildberries, Ozon). Telegram bots for sellers and buyers. My role: development support, testing, QA.",
+        "ru": "AI-нативная кешбэк-платформа для российских маркетплейсов (Wildberries, Ozon). Телеграм-боты для продавцов и покупателей. Моя роль: поддержка разработки, тестирование, QA."
+      },
+      "image": "",
+      "type": {
+        "en": "Bot · Collaboration",
+        "ru": "Бот · Коллаборация"
+      },
+      "date": "2024-06-01",
       "url": "",
       "internal": false
     }

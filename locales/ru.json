@@ -3,6 +3,7 @@
     "home": "Главная",
     "about": "Обо мне",
     "projects": "Проекты",
+    "skills": "Навыки",
     "contact": "Контакты",
     "stayInTouch": "Связаться"
   },
@@ -23,9 +24,20 @@
     "moreAboutMe": "Подробнее обо мне",
     "tabs": {
       "career": "Карьера",
+      "education": "Образование",
+      "story": "История",
       "aboutSite": "О сайте"
     },
     "siteDescription": "Сайт создан на Next.js и размещён на Vercel. Контент хранится в локальных JSON-файлах. Radix UI используется для UI-компонентов. Next Themes упростил управление темами."
+  },
+  "education": {
+    "degree": "Образование",
+    "certifications": "Сертификаты",
+    "gpa": "Средний балл"
+  },
+  "story": {
+    "shortTerm": "Ближайшие цели",
+    "longTerm": "Долгосрочно"
   },
   "projects": {
     "title": "Проекты",
@@ -49,6 +61,10 @@
     "book": "Забронировать",
     "stayInTouch": "Связаться",
     "stayInTouchDesc": "Активнее всего в Telegram"
+  },
+  "skills": {
+    "title": "Навыки",
+    "description": "Технологии и инструменты, с которыми работаю."
   },
   "tooltip": {
     "press": "Нажми"
