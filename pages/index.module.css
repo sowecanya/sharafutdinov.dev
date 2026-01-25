@@ -12,9 +12,13 @@
   }
 }
 
+/* ============================================
+   HERO SECTION
+   ============================================ */
 .heroSection {
   margin-top: 4rem;
   margin-bottom: 2rem;
+  animation: fadeUp 0.6s ease-out;
 }
 @media (max-width: 700px) {
   .heroSection {
@@ -124,6 +128,212 @@
   outline-offset: 2px;
 }
 
+/* ============================================
+   PHILOSOPHY SECTION (Manifesto Quote)
+   ============================================ */
+.philosophySection {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  padding: 3rem 0;
+  animation: fadeUp 0.6s ease-out 0.1s backwards;
+}
+@media (max-width: 700px) {
+  .philosophySection {
+    margin-top: 3rem;
+    padding: 2rem 0;
+  }
+}
+
+.philosophyQuote {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--gray12);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+.philosophyQuote span {
+  display: block;
+}
+@media (max-width: 700px) {
+  .philosophyQuote {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.philosophyCaption {
+  font-size: 1rem;
+  color: var(--gray10);
+  font-weight: 400;
+  font-style: italic;
+}
+@media (max-width: 700px) {
+  .philosophyCaption {
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================
+   LATEST WORK SECTION (Timeline)
+   ============================================ */
+.latestWorkSection {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.6s ease-out 0.2s backwards;
+}
+@media (max-width: 700px) {
+  .latestWorkSection {
+    margin-top: 3rem;
+  }
+}
+
+.sectionTitle {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray10);
+  margin-bottom: 2rem;
+}
+@media (max-width: 700px) {
+  .sectionTitle {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timelineItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--gray4);
+  transition: background-color 0.15s ease;
+}
+.timelineItem:last-child {
+  border-bottom: 1px solid var(--gray4);
+}
+@media (max-width: 700px) {
+  .timelineItem {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+}
+
+.timelineContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.timelineTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--gray12);
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.timelineTitle::before {
+  content: "→";
+  color: var(--gray8);
+  font-weight: 400;
+}
+@media (max-width: 700px) {
+  .timelineTitle {
+    font-size: 1rem;
+  }
+}
+
+.timelineDescription {
+  font-size: 0.95rem;
+  color: var(--gray10);
+  line-height: 1.5;
+  max-width: 500px;
+}
+@media (max-width: 700px) {
+  .timelineDescription {
+    font-size: 0.9rem;
+  }
+}
+
+.timelineYear {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gray9);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 700px) {
+  .timelineYear {
+    font-size: 0.8rem;
+    order: -1;
+  }
+}
+
+/* ============================================
+   BIO SECTION
+   ============================================ */
+.bioSection {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  animation: fadeUp 0.6s ease-out 0.3s backwards;
+}
+@media (max-width: 700px) {
+  .bioSection {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.bioText {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--gray11);
+  max-width: 600px;
+}
+@media (max-width: 700px) {
+  .bioText {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .heroSection,
+  .philosophySection,
+  .latestWorkSection,
+  .bioSection {
+    animation: none;
+  }
+}
+
+/* ============================================
+   LEGACY STYLES (kept for compatibility)
+   ============================================ */
 .homeSectionContainer {
   display: flex;
   flex-direction: row;
