@@ -55,6 +55,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-right: 5rem;
 }
 
 .imageWrapper {
@@ -159,6 +160,10 @@
 }
 
 @media (max-width: 700px) {
+  .row {
+    padding-right: 4.5rem;
+  }
+
   .dateBadge {
     font-size: 10px;
     padding: 0.2rem 0.4rem;
