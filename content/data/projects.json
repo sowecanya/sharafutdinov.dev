@@ -56,6 +56,63 @@
       "date": "2026-01-01",
       "url": "",
       "internal": false
+    },
+    {
+      "id": "diploma-mobile",
+      "title": {
+        "en": "Diploma Project — Mobile App",
+        "ru": "Дипломный проект — Мобильное приложение"
+      },
+      "description": {
+        "en": "Diploma project — Android mobile application built with Kotlin and SQLite for local data storage.",
+        "ru": "Дипломный проект — мобильное приложение для Android на Kotlin с локальным хранением данных в SQLite."
+      },
+      "image": "",
+      "type": {
+        "en": "Mobile · Diploma",
+        "ru": "Мобильное · Диплом"
+      },
+      "date": "2023-06-01",
+      "url": "",
+      "internal": false
+    },
+    {
+      "id": "hotel-bot",
+      "title": {
+        "en": "Hotel Search Bot",
+        "ru": "Бот поиска гостиниц"
+      },
+      "description": {
+        "en": "Diploma project — Telegram bot for hotel search and comparison. Booking API integration, price and rating filters, favorites system.",
+        "ru": "Дипломный проект — телеграм-бот для поиска и сравнения гостиниц. Интеграция с API бронирования, фильтры по цене и рейтингу, система избранного."
+      },
+      "image": "",
+      "type": {
+        "en": "Bot · Diploma",
+        "ru": "Бот · Диплом"
+      },
+      "date": "2021-06-01",
+      "url": "",
+      "internal": false
+    },
+    {
+      "id": "doodle-clone",
+      "title": {
+        "en": "Doodle Jump Clone",
+        "ru": "Клон Doodle Jump"
+      },
+      "description": {
+        "en": "Test task — Doodle Jump clone built with Unity. Procedural platform generation, jump physics, scoring system.",
+        "ru": "Тестовое задание — клон игры Doodle Jump на Unity. Процедурная генерация платформ, физика прыжков, система очков."
+      },
+      "image": "",
+      "type": {
+        "en": "Game · Test Task",
+        "ru": "Игра · Тестовое"
+      },
+      "date": "2018-01-01",
+      "url": "",
+      "internal": false
     }
   ]
 }
