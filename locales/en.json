@@ -96,5 +96,9 @@
   },
   "tooltip": {
     "press": "Press"
+  },
+  "timeline": {
+    "start": "Present — more projects coming soon",
+    "end": "The beginning — when I was just dreaming of all this"
   }
 }

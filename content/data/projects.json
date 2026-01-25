@@ -16,7 +16,15 @@
         "ru": "Веб · Личный проект"
       },
       "date": "2026-01-01",
-      "stack": ["Next.js", "React", "TypeScript"],
+      "stack": [
+        "Next.js",
+        "React",
+        "Radix UI",
+        "Framer Motion",
+        "CSS Modules",
+        "Claude Code",
+        "Vercel"
+      ],
       "url": "https://github.com/sowecanya/sharafutdinov.dev",
       "internal": false
     },
@@ -36,7 +44,14 @@
         "ru": "Бот · Коллаборация"
       },
       "date": "2026-01-01",
-      "stack": ["Python", "Telegram API"],
+      "stack": [
+        "Python",
+        "aiogram",
+        "Telegram Bot API",
+        "PostgreSQL",
+        "Redis",
+        "Docker"
+      ],
       "url": "",
       "internal": false
     },
@@ -56,7 +71,15 @@
         "ru": "Десктоп · Плагин Revit"
       },
       "date": "2025-11-01",
-      "stack": ["C#", "Revit API", "WPF"],
+      "stack": [
+        "C#",
+        ".NET",
+        "Revit API",
+        "WPF",
+        "XAML",
+        "Excel Interop",
+        "Claude Code"
+      ],
       "url": "",
       "internal": false
     },
@@ -76,7 +99,7 @@
         "ru": "Мобильное · Диплом"
       },
       "date": "2023-05-01",
-      "stack": ["Kotlin", "SQLite"],
+      "stack": ["Kotlin", "Android SDK", "SQLite", "Material Design", "MVVM"],
       "url": "",
       "internal": false
     },
@@ -96,7 +119,13 @@
         "ru": "Бот · Диплом"
       },
       "date": "2021-06-01",
-      "stack": ["Python", "SQLite", "Telegram API"],
+      "stack": [
+        "Python",
+        "python-telegram-bot",
+        "SQLite",
+        "Booking API",
+        "Requests"
+      ],
       "url": "",
       "internal": false
     },
@@ -116,7 +145,7 @@
         "ru": "Игра · Тестовое"
       },
       "date": "2018-03-01",
-      "stack": ["C#", "Unity"],
+      "stack": ["C#", "Unity", "Unity Physics", "Procedural Generation"],
       "url": "",
       "internal": false
     }
