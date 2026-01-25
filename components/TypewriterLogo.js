@@ -3,7 +3,7 @@ import styles from "./TypewriterLogo.module.css";
 import util from "../styles/util.module.css";
 import Link from "next/link";
 
-const text = "SHARAFUTDINOV";
+const text = "Sharafutdinov Dinar";
 
 const container = {
   hidden: { opacity: 1 },
