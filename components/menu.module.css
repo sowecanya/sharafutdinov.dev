@@ -30,7 +30,10 @@
 }
 
 .settingsDesktop {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
 }
 
 .settingsMobile {

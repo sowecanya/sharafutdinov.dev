@@ -5,7 +5,9 @@
   background-color: var(--tabbg);
   padding: 3px;
   border-radius: 8px;
-  width: 100%;
+  width: auto;
+  flex: 1;
+  min-width: 0;
 }
 
 .tabs * {
