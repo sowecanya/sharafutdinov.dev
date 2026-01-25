@@ -13,29 +13,21 @@
 }
 
 .text {
-  font-family:
-    "Inter",
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  font-family: "Caveat", cursive;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   color: var(--gray12);
   transition: color 0.15s ease;
 }
 
 .cursor {
-  font-family:
-    "Inter",
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
-  font-size: 13px;
-  font-weight: 300;
+  font-family: "Caveat", cursive;
+  font-size: 22px;
+  font-weight: 400;
   color: var(--gray9);
   animation: blink 1s step-end infinite;
-  margin-left: 1px;
+  margin-left: 2px;
 }
 
 @keyframes blink {
