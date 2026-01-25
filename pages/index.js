@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 import util from "../styles/util.module.css";
-import Link from "next/link";
 import styles from "../pages/index.module.css";
 import profile from "../content/data/profile.json";
 import projects from "../content/data/projects.json";
@@ -11,6 +11,40 @@ import { useTranslation } from "../lib/i18n";
 function getYear(dateStr) {
   if (!dateStr) return "";
   return dateStr.split("-")[0];
+}
+
+// Typewriter effect component
+const containerVariants = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.05, delayChildren: 0.1 },
+  },
+};
+
+const letterVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.03 } },
+};
+
+function TypewriterText({ text }) {
+  return (
+    <motion.span variants={containerVariants} initial="hidden" animate="visible">
+      {text.split("").map((char, i) => (
+        <motion.span key={i} variants={letterVariants}>
+          {char}
+        </motion.span>
+      ))}
+      <motion.span
+        className={styles.cursor}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: text.length * 0.05 + 0.2 }}
+      >
+        |
+      </motion.span>
+    </motion.span>
+  );
 }
 
 export default function Home() {
@@ -48,29 +82,11 @@ export default function Home() {
         <div className={styles.homeColumn}>
           {/* HERO SECTION */}
           <section className={styles.heroSection}>
-            <h1 className={styles.heroName}>{profile.name}</h1>
-            <p className={styles.heroRole}>{localize(profile.title)}</p>
-            <p className={styles.heroValueProp}>{t("home.valueProp")}</p>
-            <p className={styles.heroTags}>{t("home.tags")}</p>
-            <div className={styles.heroCta}>
-              <Link href="/projects">
-                <a className={styles.ctaPrimary}>{t("home.viewProjects")}</a>
-              </Link>
-              <Link href="/about">
-                <a className={styles.ctaSecondary}>{t("home.getInTouch")}</a>
-              </Link>
-            </div>
-          </section>
-
-          {/* PHILOSOPHY SECTION (Manifesto Quote) */}
-          <section className={styles.philosophySection}>
-            <blockquote className={styles.philosophyQuote}>
-              <span>{t("home.philosophy.line1")}</span>
-              <span>{t("home.philosophy.line2")}</span>
-              <span>{t("home.philosophy.line3")}</span>
-            </blockquote>
-            <p className={styles.philosophyCaption}>
-              {t("home.philosophy.caption")}
+            <h1 className={styles.heroName}>
+              <TypewriterText text={profile.name} />
+            </h1>
+            <p className={styles.heroRole}>
+              BIM координатор @ R1 | .NET Developer | AI Engineer
             </p>
           </section>
 
@@ -94,12 +110,6 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-          </section>
-
-          {/* BIO SECTION */}
-          <section className={styles.bioSection}>
-            <h2 className={styles.sectionTitle}>{t("home.bio")}</h2>
-            <p className={styles.bioText}>{localize(profile.bio)}</p>
           </section>
         </div>
       </main>
