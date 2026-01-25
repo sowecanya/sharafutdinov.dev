@@ -8,16 +8,10 @@
     "stayInTouch": "Stay in touch"
   },
   "home": {
-    "greeting": {
-      "morning": "Good morning",
-      "afternoon": "Good afternoon",
-      "evening": "Good evening",
-      "late": "It's late, go to bed",
-      "default": "Hello"
-    },
-    "welcome": "My name is {name} — Welcome to my site.",
-    "quickLinks": "Quick Links",
-    "aboutMe": "About Me"
+    "valueProp": "Building productivity tools for AEC industry",
+    "tags": "Revit API • Family Development • AI-assisted workflows",
+    "viewProjects": "View Projects",
+    "getInTouch": "Get in Touch"
   },
   "about": {
     "title": "About",

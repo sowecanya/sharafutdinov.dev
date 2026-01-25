@@ -8,7 +8,6 @@ import { useTranslation } from "../lib/i18n";
 
 export default function Home() {
   const { t, localize } = useTranslation();
-  const [userTime, setUserTime] = React.useState(null);
 
   useEffect(() => {
     let thisPage = document.querySelector("#recentsPage");
@@ -23,25 +22,6 @@ export default function Home() {
     return () => thisPage.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    const hour = new Date().getHours();
-    var greetingKey =
-      hour > 17
-        ? "evening"
-        : hour > 11
-          ? "afternoon"
-          : hour > 4
-            ? "morning"
-            : hour > 2
-              ? "late"
-              : "default";
-    setUserTime(greetingKey);
-  }, []);
-
-  const greeting = userTime
-    ? t(`home.greeting.${userTime}`)
-    : t("home.greeting.default");
-
   return (
     <>
       <Head>
@@ -54,28 +34,23 @@ export default function Home() {
       </Head>
       <main className={util.page} id="recentsPage">
         <div className={styles.homeColumn}>
-          <h1 className={styles.homeGreetingTitle}>{greeting}</h1>
-          <span className={styles.tinyText}>
-            {t("home.welcome", { name: profile.name.split(" ")[0] })}
-          </span>
+          <section className={styles.heroSection}>
+            <h1 className={styles.heroName}>{profile.name}</h1>
+            <p className={styles.heroRole}>{localize(profile.title)}</p>
+            <p className={styles.heroValueProp}>{t("home.valueProp")}</p>
+            <p className={styles.heroTags}>{t("home.tags")}</p>
+            <div className={styles.heroCta}>
+              <Link href="/projects">
+                <a className={styles.ctaPrimary}>{t("home.viewProjects")}</a>
+              </Link>
+              <Link href="/about">
+                <a className={styles.ctaSecondary}>{t("home.getInTouch")}</a>
+              </Link>
+            </div>
+          </section>
 
-          <div className={util.read} style={{ marginTop: "2rem" }}>
+          <div className={util.read} style={{ marginTop: "3rem" }}>
             <p>{localize(profile.bio)}</p>
-          </div>
-
-          <div
-            className={styles.homeSectionContainer}
-            style={{ marginTop: "3rem" }}
-          >
-            <h2 className={styles.homeSectionTitle}>{t("home.quickLinks")}</h2>
-          </div>
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link href="/about">
-              <a className={styles.homeLinkButton}>{t("home.aboutMe")}</a>
-            </Link>
-            <Link href="/projects">
-              <a className={styles.homeLinkButton}>{t("nav.projects")}</a>
-            </Link>
           </div>
         </div>
       </main>
