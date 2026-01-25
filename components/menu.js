@@ -1,28 +1,14 @@
 import styles from "../components/menu.module.css";
 import { ThemeChanger } from "./theme";
-import Link from "next/link";
 import NavLink from "./navLink";
 import Contact from "./contact";
-import util from "../styles/util.module.css";
-import Image from "next/image";
+import TypewriterLogo from "./TypewriterLogo";
 
 export default function Menu() {
   return (
     <div className={styles.container}>
       <div className={styles.upper}>
-        <Link href="/" passHref>
-          <a>
-            <Image
-              className={
-                util.hiddenOnMobile + " " + util.pointer + " logoInvert"
-              }
-              src="/logo.png"
-              alt="site logo"
-              width={32}
-              height={32}
-            />
-          </a>
-        </Link>
+        <TypewriterLogo />
 
         <nav className={styles.nav}>
           <NavLink svg="recents" href="/" label="Home" shortcut="1" />
