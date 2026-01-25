@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "title": "Project One",
+      "description": "Description of your first project.",
+      "image": "project-placeholder",
+      "type": "Web · Side Project",
+      "date": "2024-01-01",
+      "url": "",
+      "internal": false
+    }
+  ]
+}
