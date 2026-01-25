@@ -12,7 +12,7 @@ import styles from "../styles/story.module.css";
 
 export default function About() {
   const { t, localize } = useTranslation();
-  const tabKeys = ["career", "education", "story", "aboutSite"];
+  const tabKeys = ["career", "education", "story"];
   const [activeTab, setActiveTab] = React.useState(tabKeys[0]);
 
   useEffect(() => {
@@ -178,11 +178,6 @@ export default function About() {
                 <blockquote className={styles.quote}>
                   {localize(storyData.quote.text)}
                 </blockquote>
-              </div>
-            )}
-            {activeTab === "aboutSite" && (
-              <div className={util.read}>
-                <p>{t("about.siteDescription")}</p>
               </div>
             )}
           </div>
