@@ -58,8 +58,8 @@
     {
       "id": "dstools",
       "title": {
-        "en": "DSTools - Revit Plugins Platform",
-        "ru": "DSTools - Линейка плагинов для Revit"
+        "en": "DSTools – Revit Plugins Platform",
+        "ru": "DSTools – Линейка плагинов для Revit"
       },
       "description": {
         "en": "A suite of productivity plugins for Autodesk Revit aimed at MEP engineers and BIM coordinators. Features: Ribbon integration, WPF interface, Excel export. Built with Claude Code using custom multi-agent workflows.",
@@ -86,12 +86,12 @@
     {
       "id": "diploma-mobile",
       "title": {
-        "en": "Diploma Project - Mobile App",
-        "ru": "Дипломный проект - Мобильное приложение"
+        "en": "Diploma Project – Mobile App",
+        "ru": "Дипломный проект – Мобильное приложение"
       },
       "description": {
-        "en": "Diploma project - Android mobile application built with Kotlin and SQLite for local data storage.",
-        "ru": "Дипломный проект - мобильное приложение для Android на Kotlin с локальным хранением данных в SQLite."
+        "en": "Diploma project – Android mobile application built with Kotlin and SQLite for local data storage.",
+        "ru": "Дипломный проект – мобильное приложение для Android на Kotlin с локальным хранением данных в SQLite."
       },
       "image": "",
       "type": {
@@ -110,8 +110,8 @@
         "ru": "Бот поиска гостиниц"
       },
       "description": {
-        "en": "Diploma project - Telegram bot for hotel search and comparison. Booking API integration, price and rating filters, favorites system.",
-        "ru": "Дипломный проект - телеграм-бот для поиска и сравнения гостиниц. Интеграция с API бронирования, фильтры по цене и рейтингу, система избранного."
+        "en": "Diploma project – Telegram bot for hotel search and comparison. Booking API integration, price and rating filters, favorites system.",
+        "ru": "Дипломный проект – телеграм-бот для поиска и сравнения гостиниц. Интеграция с API бронирования, фильтры по цене и рейтингу, система избранного."
       },
       "image": "",
       "type": {
@@ -136,8 +136,8 @@
         "ru": "Клон Doodle Jump"
       },
       "description": {
-        "en": "Test task - Doodle Jump clone built with Unity. Procedural platform generation, jump physics, scoring system.",
-        "ru": "Тестовое задание - клон игры Doodle Jump на Unity. Процедурная генерация платформ, физика прыжков, система очков."
+        "en": "Test task – Doodle Jump clone built with Unity. Procedural platform generation, jump physics, scoring system.",
+        "ru": "Тестовое задание – клон игры Doodle Jump на Unity. Процедурная генерация платформ, физика прыжков, система очков."
       },
       "image": "",
       "type": {
