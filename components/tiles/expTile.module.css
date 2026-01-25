@@ -14,7 +14,7 @@
   line-height: 1.5;
 }
 .date {
-  min-width: 100px;
+  min-width: 135px;
   font-size: var(--font-m);
   color: var(--gray10);
   margin-top: 1.5px;
