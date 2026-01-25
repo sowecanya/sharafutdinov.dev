@@ -116,68 +116,13 @@ export default function About() {
             )}
             {activeTab === "story" && (
               <div className={styles.storyContainer}>
-                <section className={styles.section}>
-                  <h3 className={styles.sectionTitle}>
-                    {localize(storyData.background.title)}
-                  </h3>
-                  <p className={styles.sectionContent}>
-                    {localize(storyData.background.content)}
-                  </p>
-                </section>
-
-                <section className={styles.section}>
-                  <h3 className={styles.sectionTitle}>
-                    {localize(storyData.drives.title)}
-                  </h3>
-                  <ul className={styles.list}>
-                    {localize(storyData.drives.items).map((item, index) => (
-                      <li key={index} className={styles.listItem}>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-
-                <section className={styles.section}>
-                  <h3 className={styles.sectionTitle}>
-                    {localize(storyData.goals.title)}
-                  </h3>
-                  <div className={styles.goalsGrid}>
-                    <div className={styles.goalColumn}>
-                      <h4 className={styles.goalPeriod}>
-                        {t("story.shortTerm")} (
-                        {storyData.goals.shortTerm.period})
-                      </h4>
-                      <ul className={styles.goalList}>
-                        {localize(storyData.goals.shortTerm.items).map(
-                          (item, index) => (
-                            <li key={index}>{item}</li>
-                          ),
-                        )}
-                      </ul>
-                    </div>
-                    <div className={styles.goalColumn}>
-                      <h4 className={styles.goalPeriod}>
-                        {t("story.longTerm")}
-                      </h4>
-                      <ul className={styles.goalList}>
-                        {localize(storyData.goals.longTerm.items).map(
-                          (item, index) => (
-                            <li key={index}>{item}</li>
-                          ),
-                        )}
-                      </ul>
-                    </div>
-                  </div>
-                </section>
-
-                <div className={styles.highlight}>
-                  {localize(storyData.uniquePositioning)}
-                </div>
-
-                <blockquote className={styles.quote}>
-                  {localize(storyData.quote.text)}
-                </blockquote>
+                <article className={styles.narrative}>
+                  {storyData.paragraphs.map((paragraph, index) => (
+                    <p key={index} className={styles.paragraph}>
+                      {localize(paragraph)}
+                    </p>
+                  ))}
+                </article>
               </div>
             )}
           </div>

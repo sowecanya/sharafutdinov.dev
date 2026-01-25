@@ -1,109 +1,41 @@
 .storyContainer {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
-.section {
-  margin-bottom: 2rem;
+.narrative {
+  max-width: 650px;
 }
 
-.sectionTitle {
-  font-size: var(--font-xl);
-  font-weight: 600;
+.paragraph {
+  font-size: var(--font-l);
+  color: var(--gray11);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Make first paragraph slightly larger */
+.paragraph:first-child {
+  font-size: calc(var(--font-l) * 1.05);
+}
+
+/* Highlight last paragraph (the dream) */
+.paragraph:last-child {
   color: var(--gray12);
-  margin-bottom: 0.75rem;
-}
-
-.sectionContent {
-  font-size: var(--font-l);
-  color: var(--gray11);
-  line-height: 1.6;
-}
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.listItem {
-  font-size: var(--font-l);
-  color: var(--gray11);
-  padding: 0.5rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.listItem::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--gray8);
-}
-
-.goalsGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-.goalColumn {
-  padding: 1rem;
-  background-color: var(--gray2);
-  border-radius: 8px;
-  border: 1px solid var(--gray4);
-}
-
-.goalPeriod {
-  font-size: var(--font-m);
-  font-weight: 600;
-  color: var(--gray12);
-  margin-bottom: 0.75rem;
-}
-
-.goalList {
-  list-style: disc;
-  padding-left: 1.25rem;
-  margin: 0;
-}
-
-.goalList li {
-  font-size: var(--font-m);
-  color: var(--gray11);
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
-}
-
-.highlight {
-  margin: 2rem 0;
-  padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, var(--gray3) 0%, var(--gray2) 100%);
-  border-left: 3px solid var(--gray8);
-  border-radius: 0 8px 8px 0;
-  font-size: var(--font-l);
-  font-weight: 500;
-  color: var(--gray12);
-}
-
-.quote {
-  margin: 2rem 0;
-  padding: 1.5rem;
-  font-size: var(--font-l);
-  font-style: italic;
-  color: var(--gray11);
-  border-left: 3px solid var(--gray6);
-  background-color: var(--gray2);
-  border-radius: 0 8px 8px 0;
+  font-weight: 450;
 }
 
 @media (max-width: 700px) {
-  .goalsGrid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .paragraph {
+    font-size: var(--font-m);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+  
+  .paragraph:first-child {
+    font-size: var(--font-l);
   }
 }
