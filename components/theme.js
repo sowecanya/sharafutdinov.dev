@@ -1,12 +1,18 @@
 import { useTheme } from "next-themes";
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "../components/theme.module.css";
+import { trackThemeChange } from "../lib/analytics";
 
 export const ThemeChanger = () => {
   const { theme, setTheme } = useTheme();
   let isLightChecked = theme == "light" ? "checked" : null;
   let isDarkChecked = theme == "dark" ? "checked" : null;
   let isAutoChecked = theme == "system" ? "checked" : null;
+
+  const handleThemeChange = (newTheme) => {
+    setTheme(newTheme);
+    trackThemeChange(newTheme);
+  };
 
   return (
     <div>
@@ -16,7 +22,7 @@ export const ThemeChanger = () => {
           type="radio"
           id="radio-1"
           name="tabs"
-          onChange={() => setTheme("light")}
+          onChange={() => handleThemeChange("light")}
           checked={isLightChecked}
         />
         <label className={styles.tab} htmlFor="radio-1">
@@ -27,7 +33,7 @@ export const ThemeChanger = () => {
           type="radio"
           id="radio-2"
           name="tabs"
-          onChange={() => setTheme("dark")}
+          onChange={() => handleThemeChange("dark")}
           checked={isDarkChecked}
         />
         <label className={styles.tab} htmlFor="radio-2">
@@ -38,7 +44,7 @@ export const ThemeChanger = () => {
           type="radio"
           id="radio-3"
           name="tabs"
-          onChange={() => setTheme("system")}
+          onChange={() => handleThemeChange("system")}
           checked={isAutoChecked}
         />
         <label className={styles.tab} htmlFor="radio-3">

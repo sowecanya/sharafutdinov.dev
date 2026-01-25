@@ -1,6 +1,7 @@
 import styles from ".//projectTile.module.css";
 import Image from "next/image";
 import util from "../../styles/util.module.css";
+import { trackProjectClick } from "../../lib/analytics";
 
 export default function ProjectTile({
   image,
@@ -24,6 +25,7 @@ export default function ProjectTile({
         target="_blank"
         rel="noopener noreferrer"
         className={styles.container}
+        onClick={() => trackProjectClick(title)}
       >
         {image && (
           <div className={styles.imageWrapper}>

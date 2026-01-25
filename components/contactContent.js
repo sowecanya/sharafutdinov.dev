@@ -5,6 +5,7 @@ import util from "../styles/util.module.css";
 import toast from "react-hot-toast";
 import profile from "../content/data/profile.json";
 import { useTranslation } from "../lib/i18n";
+import { trackSocialClick } from "../lib/analytics";
 
 export default function ContactContent() {
   const { t } = useTranslation();
@@ -85,6 +86,7 @@ export default function ContactContent() {
               href={profile.social.telegram}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackSocialClick("telegram")}
             >
               <Image
                 className={styles.icon}
@@ -103,6 +105,7 @@ export default function ContactContent() {
               href={profile.social.github}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackSocialClick("github")}
             >
               <Image
                 className={styles.icon}
@@ -121,6 +124,7 @@ export default function ContactContent() {
               href={profile.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackSocialClick("linkedin")}
             >
               <Image
                 className={styles.icon}
@@ -139,6 +143,7 @@ export default function ContactContent() {
               href={profile.social.twitter}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackSocialClick("twitter")}
             >
               <Image
                 className={styles.icon}

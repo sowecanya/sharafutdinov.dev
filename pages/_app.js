@@ -2,10 +2,11 @@ import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import Background from "../components/background";
 import Menu from "../components/menu";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import React from "react";
 import { Analytics } from "@vercel/analytics/react";
-import { LanguageProvider, getDefaultLocale } from "../lib/i18n";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { LanguageProvider } from "../lib/i18n";
 
 function MyApp({ Component, pageProps }) {
   // Get initial locale from Vercel geo header (passed via pageProps) or default to 'en'
@@ -29,6 +30,7 @@ function MyApp({ Component, pageProps }) {
         <Menu />
         <Component {...pageProps} />
         <Analytics />
+        <SpeedInsights />
       </ThemeProvider>
     </LanguageProvider>
   );

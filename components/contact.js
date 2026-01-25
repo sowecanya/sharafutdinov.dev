@@ -6,6 +6,7 @@ import util from "../styles/util.module.css";
 import ContactContent from "./contactContent";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import { useTranslation } from "../lib/i18n";
+import { trackContactOpen } from "../lib/analytics";
 
 export default function Contact({ svg, label, shortcut }) {
   const { t } = useTranslation();
@@ -30,7 +31,7 @@ export default function Contact({ svg, label, shortcut }) {
   }, [shortcut]);
 
   return (
-    <Dialog.Root>
+    <Dialog.Root onOpenChange={(open) => open && trackContactOpen()}>
       <Dialog.Trigger asChild id="contactTrigger">
         <div className={styles.item}>
           <div className={styles.left}>

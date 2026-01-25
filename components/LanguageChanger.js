@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./LanguageChanger.module.css";
 import { useTranslation } from "../lib/i18n";
+import { trackLanguageChange } from "../lib/analytics";
 
 export function LanguageChanger() {
   const { locale, setLocale, mounted } = useTranslation();
@@ -16,6 +17,11 @@ export function LanguageChanger() {
     );
   }
 
+  const handleLocaleChange = (newLocale) => {
+    setLocale(newLocale);
+    trackLanguageChange(newLocale);
+  };
+
   const isRuChecked = locale === "ru" ? "checked" : null;
   const isEnChecked = locale === "en" ? "checked" : null;
 
@@ -26,7 +32,7 @@ export function LanguageChanger() {
         type="radio"
         id="lang-ru"
         name="lang"
-        onChange={() => setLocale("ru")}
+        onChange={() => handleLocaleChange("ru")}
         checked={isRuChecked}
       />
       <label className={styles.tab} htmlFor="lang-ru">
@@ -37,7 +43,7 @@ export function LanguageChanger() {
         type="radio"
         id="lang-en"
         name="lang"
-        onChange={() => setLocale("en")}
+        onChange={() => handleLocaleChange("en")}
         checked={isEnChecked}
       />
       <label className={styles.tab} htmlFor="lang-en">
