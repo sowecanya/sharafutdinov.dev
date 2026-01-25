@@ -4,7 +4,7 @@
       "id": "dstools",
       "title": {
         "en": "DSTools — Revit Plugins Platform",
-        "ru": "DSTools — Платформа плагинов для Revit"
+        "ru": "DSTools — Линейка плагинов для Revit"
       },
       "description": {
         "en": "A suite of productivity plugins for Autodesk Revit aimed at MEP engineers and BIM coordinators. Features: Ribbon integration, WPF interface, Excel export. Built with Claude Code using custom multi-agent workflows.",

@@ -26,7 +26,7 @@ export default function Projects() {
     <>
       <Head>
         <title>
-          {profile.name} · {t("projects.title")}
+          {localize(profile.name)} · {t("projects.title")}
         </title>
         <meta name="description" content={t("projects.description")} />
         <link rel="icon" href="/favicon.gif" />

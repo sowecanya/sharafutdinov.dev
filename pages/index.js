@@ -72,7 +72,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          {profile.name} · {t("nav.home")}
+          {localize(profile.name)} · {t("nav.home")}
         </title>
         <meta name="description" content={localize(profile.description)} />
         <link rel="icon" href="/favicon.gif" type="image/gif" />
@@ -83,10 +83,10 @@ export default function Home() {
           {/* HERO SECTION */}
           <section className={styles.heroSection}>
             <h1 className={styles.heroName}>
-              <TypewriterText text={profile.name} />
+              <TypewriterText text={localize(profile.name)} />
             </h1>
             <p className={styles.heroRole}>
-              BIM координатор @ R1 | .NET Developer | AI Engineer
+              {localize(profile.title)}
             </p>
           </section>
 

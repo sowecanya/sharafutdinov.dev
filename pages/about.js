@@ -32,7 +32,7 @@ export default function About() {
     <>
       <Head>
         <title>
-          {profile.name} · {t("about.title")}
+          {localize(profile.name)} · {t("about.title")}
         </title>
         <meta name="description" content={localize(profile.bio)} />
         <link rel="icon" href="/favicon.gif" />

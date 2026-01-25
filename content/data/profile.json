@@ -1,8 +1,11 @@
 {
-  "name": "Dinar Sharafutdinov",
+  "name": {
+    "en": "Dinar Sharafutdinov",
+    "ru": "Динар Шарафутдинов"
+  },
   "title": {
-    "en": "BIM Coordinator & .NET Developer",
-    "ru": "BIM-координатор и .NET-разработчик"
+    "en": "BIM Coordinator @ R1 | .NET Developer | AI Engineer",
+    "ru": ".NET разработчик | AI инженер | BIM-координатор"
   },
   "bio": {
     "en": "BIM Coordinator and .NET Developer specializing in Revit automation, engineering family development, and BIM workflows optimization. Building productivity tools for AEC industry. Passionate about AI-assisted development — actively using Claude Code with custom multi-agent workflows.",
