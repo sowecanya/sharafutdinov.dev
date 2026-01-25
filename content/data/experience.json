@@ -10,10 +10,8 @@
         "en": "BIM Coordinator",
         "ru": "BIM-координатор"
       },
-      "date": {
-        "en": "Feb 2025 – Present",
-        "ru": "Февраль 2025 – настоящее время"
-      },
+      "startDate": "2025-11-01",
+      "endDate": null,
       "description": {
         "en": "Development of Revit engineering families (parametric, lookup tables). Library management and optimization. Consulting and supporting design engineers in Revit workflows. BIM coordination and quality control.",
         "ru": "Разработка инженерных семейств Revit (параметрические, таблицы подстановки). Управление и оптимизация библиотек. Консультирование проектировщиков по работе в Revit. BIM-координация и контроль качества."
@@ -30,10 +28,8 @@
         "en": "Automation Design Engineer",
         "ru": "Инженер-проектировщик автоматизации"
       },
-      "date": {
-        "en": "2024 – Feb 2025",
-        "ru": "2024 – Февраль 2025"
-      },
+      "startDate": "2024-02-01",
+      "endDate": "2024-09-01",
       "description": {
         "en": "Design and construction documentation for Automation and Dispatching Systems. Projects: civil buildings and metro infrastructure. Coordination with HVAC, Electrical, Plumbing, Fire Protection teams.",
         "ru": "Рабочая документация по автоматизации и диспетчеризации. Проекты: гражданские здания и объекты метро. Координация со смежными разделами (ОВ, ЭОМ, ВК, ПБ)."
