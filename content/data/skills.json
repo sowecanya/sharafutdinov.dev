@@ -9,15 +9,23 @@
       "items": [
         {
           "name": "C#",
-          "tags": [".NET 4.8", "WPF", "Revit plugins", "Desktop apps"]
+          "tags": [".NET", "WPF", "LINQ", "Revit API"]
         },
         {
           "name": "Python",
-          "tags": ["FastAPI", "aiogram 3.x", "Pydantic", "Async"]
+          "tags": ["NumPy", "Pandas", "FastAPI", "aiogram"]
         },
         {
           "name": "TypeScript",
-          "tags": ["Next.js", "React", "Node.js"]
+          "tags": ["Next.js", "React"]
+        },
+        {
+          "name": "Kotlin",
+          "tags": ["Android", "Mobile apps"]
+        },
+        {
+          "name": "SQL",
+          "tags": ["PostgreSQL", "SQLite"]
         }
       ]
     },
@@ -58,16 +66,16 @@
           "tags": ["Compose", "Multi-stage builds"]
         },
         {
-          "name": "GitHub Actions",
-          "tags": ["CI/CD", "Automated testing"]
+          "name": "Git",
+          "tags": ["GitHub", "Version control"]
+        },
+        {
+          "name": "Linux",
+          "tags": ["SSH", "Bash", "CLI"]
         },
         {
           "name": "Vercel",
-          "tags": ["Next.js deployments"]
-        },
-        {
-          "name": "Git",
-          "tags": ["Conventional commits", "Branching strategies"]
+          "tags": ["CI/CD", "Deployments"]
         }
       ]
     },
@@ -83,25 +91,29 @@
           "tags": ["Relational design", "Queries"]
         },
         {
+          "name": "SQLite",
+          "tags": ["Local storage", "Mobile"]
+        },
+        {
           "name": "Supabase",
-          "tags": ["Auth", "Realtime", "Storage"]
+          "tags": ["Auth", "Realtime", "BaaS"]
         }
       ]
     },
     {
       "id": "ai",
       "title": {
-        "en": "AI & Emerging Technologies",
-        "ru": "AI и новые технологии"
+        "en": "AI & Automation",
+        "ru": "AI и автоматизация"
       },
       "items": [
         {
           "name": "Claude Code",
-          "tags": ["Custom skills", "Multi-agent pipelines", "Daily driver"]
+          "tags": ["Multi-agent", "Custom skills", "Daily driver"]
         },
         {
           "name": "Cursor",
-          "tags": ["AI-powered IDE"]
+          "tags": ["AI IDE", "Code generation"]
         },
         {
           "name": "Prompt Engineering",
@@ -112,21 +124,21 @@
     {
       "id": "tools",
       "title": {
-        "en": "Tools & Frameworks",
-        "ru": "Инструменты и фреймворки"
+        "en": "Tools & Productivity",
+        "ru": "Инструменты"
       },
       "items": [
         {
           "name": "Visual Studio",
-          "tags": ["C#", ".NET development"]
+          "tags": ["C#", ".NET"]
         },
         {
           "name": "VS Code",
           "tags": ["TypeScript", "Python"]
         },
         {
-          "name": "Figma",
-          "tags": ["UI basics", "Prototyping"]
+          "name": "Excel / Google Sheets",
+          "tags": ["Data analysis", "Automation"]
         },
         {
           "name": "Notion",
