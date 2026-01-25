@@ -10,12 +10,13 @@
         "en": "BIM Coordinator",
         "ru": "BIM-координатор"
       },
-      "startDate": "2025-11-01",
+      "startDate": "2025-02-01",
       "endDate": null,
       "description": {
         "en": "Development of Revit engineering families (parametric, lookup tables). Library management and optimization. Consulting and supporting design engineers in Revit workflows. BIM coordination and quality control.",
         "ru": "Разработка инженерных семейств Revit (параметрические, таблицы подстановки). Управление и оптимизация библиотек. Консультирование проектировщиков по работе в Revit. BIM-координация и контроль качества."
       },
+      "stack": ["Revit", "Revit API", "C#", "Navisworks"],
       "url": ""
     },
     {
@@ -24,16 +25,78 @@
         "en": "MARKS GROUP",
         "ru": "MARKS GROUP"
       },
-      "role": {
-        "en": "Automation Design Engineer",
-        "ru": "Инженер-проектировщик автоматизации"
-      },
       "startDate": "2024-02-01",
-      "endDate": "2025-09-01",
-      "description": {
-        "en": "Design and construction documentation for Automation and Dispatching Systems. Projects: civil buildings and metro infrastructure. Coordination with HVAC, Electrical, Plumbing, Fire Protection teams.",
-        "ru": "Рабочая документация по автоматизации и диспетчеризации. Проекты: гражданские здания и объекты метро. Координация со смежными разделами (ОВ, ЭОМ, ВК, ПБ)."
+      "endDate": "2025-02-01",
+      "progression": [
+        {
+          "role": {
+            "en": "Senior Design Engineer (Category I)",
+            "ru": "Ведущий инженер-проектировщик (I категория)"
+          },
+          "startDate": "2024-06-01",
+          "endDate": "2025-02-01",
+          "responsibilities": {
+            "en": [
+              "Led complex engineering solutions and systems integration",
+              "Coordinated project team's BIM model",
+              "Developed internal Revit standards and templates",
+              "Vendor coordination and equipment specifications"
+            ],
+            "ru": [
+              "Руководство сложными инженерными решениями и интеграцией систем",
+              "Координация BIM-модели проектной группы",
+              "Разработка внутренних стандартов Revit",
+              "Координация с поставщиками и спецификации оборудования"
+            ]
+          }
+        },
+        {
+          "role": {
+            "en": "Design Engineer (Category II)",
+            "ru": "Инженер-проектировщик (II категория)"
+          },
+          "startDate": "2024-04-01",
+          "endDate": "2024-06-01",
+          "responsibilities": {
+            "en": [
+              "Advanced Revit modeling and configuration",
+              "Mentored colleagues on BIM workflows",
+              "Cross-discipline coordination and clash detection"
+            ],
+            "ru": [
+              "Продвинутое моделирование в Revit",
+              "Наставничество коллег по BIM-процессам",
+              "Межраздельная координация и поиск коллизий"
+            ]
+          }
+        },
+        {
+          "role": {
+            "en": "Junior Design Engineer (Category III)",
+            "ru": "Инженер-проектировщик (III категория)"
+          },
+          "startDate": "2024-02-01",
+          "endDate": "2024-04-01",
+          "responsibilities": {
+            "en": [
+              "Design documentation for Automation and Dispatching",
+              "Projects: Moscow Metro infrastructure, civil buildings",
+              "Initial BIM environment and equipment placement"
+            ],
+            "ru": [
+              "Рабочая документация по автоматизации и диспетчеризации",
+              "Проекты: объекты Московского метро, гражданские здания",
+              "Начальная работа в BIM-среде и размещение оборудования"
+            ]
+          }
+        }
+      ],
+      "projects": {
+        "en": ["Moscow Metro", "Civil Buildings"],
+        "ru": ["Московское метро", "Гражданские здания"]
       },
+      "documentation": ["АОВ", "АПДВ", "АЦК", "АВО", "АВК", "АИТП", "АИИСКУЭ"],
+      "stack": ["AutoCAD", "Revit", "Navisworks", "Eplan"],
       "url": ""
     }
   ]

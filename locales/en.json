@@ -100,5 +100,9 @@
   "timeline": {
     "start": "planning",
     "end": "dreaming"
+  },
+  "experience": {
+    "projects": "Projects",
+    "docs": "Docs"
   }
 }

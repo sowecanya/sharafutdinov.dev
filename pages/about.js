@@ -2,6 +2,7 @@ import Head from "next/head";
 import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
 import ExpTile from "../components/tiles/expTile";
+import ExpTileProgression from "../components/tiles/expTileProgression";
 import profile from "../content/data/profile.json";
 import experienceData from "../content/data/experience.json";
 import educationData from "../content/data/education.json";
@@ -139,15 +140,23 @@ export default function About() {
             </div>
             {activeTab === "career" && (
               <div>
-                {experienceData.items.map((item) => (
-                  <ExpTile
-                    key={item.id}
-                    date={formatDateRange(item.startDate, item.endDate, locale)}
-                    title={`${localize(item.role)} @ ${localize(item.company)}`}
-                    url={item.url}
-                    content={localize(item.description)}
-                  />
-                ))}
+                {experienceData.items.map((item) =>
+                  item.progression ? (
+                    <ExpTileProgression key={item.id} item={item} />
+                  ) : (
+                    <ExpTile
+                      key={item.id}
+                      date={formatDateRange(
+                        item.startDate,
+                        item.endDate,
+                        locale,
+                      )}
+                      title={`${localize(item.role)} @ ${localize(item.company)}`}
+                      url={item.url}
+                      content={localize(item.description)}
+                    />
+                  ),
+                )}
               </div>
             )}
             {activeTab === "education" && (
