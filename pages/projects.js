@@ -65,13 +65,6 @@ export default function Projects() {
           <div className={styles.timeline}>
             <div className={styles.timelineLine} aria-hidden="true" />
 
-            {/* Timeline start marker */}
-            <div
-              className={`${styles.timelineMarker} ${styles.timelineMarkerStart}`}
-            >
-              {t("timeline.start")}
-            </div>
-
             {projectsByYear.map(({ year, projects }) => (
               <section key={year} className={styles.yearSection}>
                 <h2 className={styles.yearTitle}>{year}</h2>
@@ -99,13 +92,6 @@ export default function Projects() {
                 </ul>
               </section>
             ))}
-
-            {/* Timeline end marker */}
-            <div
-              className={`${styles.timelineMarker} ${styles.timelineMarkerEnd}`}
-            >
-              {t("timeline.end")}
-            </div>
           </div>
 
           {projectsData.items.length === 0 && (

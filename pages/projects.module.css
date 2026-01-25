@@ -66,49 +66,6 @@
   list-style: none;
 }
 
-/* Timeline markers (start/end) - Badge style */
-.timelineMarker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  position: relative;
-  padding: 0.375rem 0.75rem;
-  margin: 2rem 0;
-  margin-left: -2rem;
-  padding-left: calc(2rem + 0.75rem);
-  background-color: var(--gray3);
-  border: 1px solid var(--gray5);
-  border-radius: 16px;
-  color: var(--gray11);
-  font-size: 12px;
-  font-weight: 500;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, monospace;
-  letter-spacing: 0.02em;
-}
-
-.timelineMarker::before {
-  content: "";
-  position: absolute;
-  left: -4px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.timelineMarkerStart {
-  margin-top: 0;
-}
-
-.timelineMarkerStart::before {
-  background: var(--blue9);
-}
-
-.timelineMarkerEnd::before {
-  background-color: var(--gray6);
-}
-
 @media (max-width: 700px) {
   .timeline {
     padding-left: 1.5rem;
@@ -138,19 +95,6 @@
     left: 0;
     width: 4px;
     height: 4px;
-  }
-
-  .timelineMarker {
-    padding: 0.25rem 0.5rem;
-    margin-left: -1.5rem;
-    padding-left: calc(1.5rem + 0.5rem);
-    font-size: 11px;
-  }
-
-  .timelineMarker::before {
-    left: -3px;
-    width: 8px;
-    height: 8px;
   }
 }
 
