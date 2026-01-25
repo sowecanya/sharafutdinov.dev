@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.container:hover {
+  background-color: var(--gray3);
+}
+
+.text {
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--gray12);
+  transition: color 0.15s ease;
+}
+
+.cursor {
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--gray9);
+  animation: blink 1s step-end infinite;
+  margin-left: 1px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
