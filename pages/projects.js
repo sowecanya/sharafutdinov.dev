@@ -29,7 +29,7 @@ export default function Projects() {
           {localize(profile.name)} · {t("projects.title")}
         </title>
         <meta name="description" content={t("projects.description")} />
-        <link rel="icon" href="/favicon.gif" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <meta property="og:image" content="/og/index.png" />
       </Head>
 

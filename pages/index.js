@@ -75,7 +75,7 @@ export default function Home() {
           {localize(profile.name)} · {t("nav.home")}
         </title>
         <meta name="description" content={localize(profile.description)} />
-        <link rel="icon" href="/favicon.gif" type="image/gif" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <meta property="og:image" content="/og/index.png" />
       </Head>
       <main className={util.page} id="recentsPage">
