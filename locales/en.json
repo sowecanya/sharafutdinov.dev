@@ -27,6 +27,7 @@
       "line3": "Ship fast.",
       "caption": "— My approach to BIM tools development"
     },
+    "now": "Now",
     "latestWork": "Latest Work",
     "bio": "Bio"
   },
@@ -44,6 +45,7 @@
   "education": {
     "degree": "Degree",
     "certifications": "Certifications",
+    "profiles": "Profiles",
     "gpa": "GPA"
   },
   "story": {
@@ -98,7 +100,7 @@
     "press": "Press"
   },
   "timeline": {
-    "start": "Present — more projects coming soon",
-    "end": "The beginning — when I was just dreaming of all this"
+    "start": "planning",
+    "end": "dreaming"
   }
 }

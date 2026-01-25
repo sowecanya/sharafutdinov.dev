@@ -22,5 +22,25 @@
     "twitter": ""
   },
   "email": "sharafutdinov.di.dev@outlook.com",
-  "location": "Russia"
+  "location": "Russia",
+  "profiles": [
+    {
+      "id": "leetcode",
+      "name": "LeetCode",
+      "url": "https://leetcode.com/u/sowecanya/",
+      "description": {
+        "en": "Algorithms & Data Structures practice",
+        "ru": "Алгоритмы и структуры данных"
+      }
+    },
+    {
+      "id": "bimvc",
+      "name": "bim.vc",
+      "url": "https://bim.vc/user/sharafutdinovdi/",
+      "description": {
+        "en": "BIM community profile",
+        "ru": "Профиль в BIM-сообществе"
+      }
+    }
+  ]
 }

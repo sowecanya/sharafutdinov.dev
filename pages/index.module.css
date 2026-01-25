@@ -52,8 +52,13 @@
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .heroRole {
@@ -192,7 +197,60 @@
 }
 
 /* ============================================
-   LATEST WORK SECTION (Timeline)
+   NOW SECTION
+   ============================================ */
+.nowSection {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  animation: fadeUp 0.6s ease-out 0.2s backwards;
+}
+@media (max-width: 700px) {
+  .nowSection {
+    margin-bottom: 2rem;
+  }
+}
+
+.nowList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nowItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--gray4);
+}
+.nowItem:last-child {
+  border-bottom: 1px solid var(--gray4);
+}
+@media (max-width: 700px) {
+  .nowItem {
+    padding: 0.75rem 0;
+  }
+}
+
+.nowEmoji {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+.nowText {
+  font-size: 1rem;
+  color: var(--gray11);
+  line-height: 1.5;
+}
+@media (max-width: 700px) {
+  .nowText {
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================
+   LATEST WORK SECTION (Timeline) - kept for reference
    ============================================ */
 .latestWorkSection {
   margin-top: 0;
