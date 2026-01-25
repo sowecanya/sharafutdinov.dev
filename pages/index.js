@@ -106,7 +106,16 @@ export default function Home() {
 
           {/* RECENT PROJECTS SECTION */}
           <section className={styles.recentProjectsSection}>
-            <h2 className={styles.sectionTitle}>{t("home.recentProjects")}</h2>
+            <header className={styles.sectionHeader}>
+              <h2 className={styles.sectionTitle}>
+                {t("home.recentProjects")}
+              </h2>
+              <Link href="/projects">
+                <a className={styles.viewAllLink}>
+                  {t("home.viewAllProjects")} →
+                </a>
+              </Link>
+            </header>
             <ul className={styles.recentProjectsList}>
               {recentProjects.map((project) => {
                 const Wrapper = project.url ? "a" : "div";
@@ -144,11 +153,6 @@ export default function Home() {
                 );
               })}
             </ul>
-            <Link href="/projects">
-              <a className={styles.viewAllLink}>
-                {t("home.viewAllProjects")} →
-              </a>
-            </Link>
           </section>
         </div>
       </main>
