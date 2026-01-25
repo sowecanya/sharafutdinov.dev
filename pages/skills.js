@@ -36,7 +36,6 @@ export default function Skills() {
       <main id="skillsPage" className={util.page}>
         <div className={util.pageColumn}>
           <h1 className={util.header}>{t("skills.title")}</h1>
-          <p className={util.description}>{t("skills.description")}</p>
           <div className={util.inset}>
             {skillsData.categories.map((category) => (
               <SkillCategory
