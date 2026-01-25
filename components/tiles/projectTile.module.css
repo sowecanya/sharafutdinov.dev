@@ -87,15 +87,12 @@
 /* Date label on timeline */
 .dateLabel {
   position: absolute;
-  left: -2rem;
+  right: calc(100% + 2.5rem);
   top: 0.5rem;
-  transform: translateX(-100%);
-  padding-right: 0.75rem;
   font-size: 11px;
   font-weight: 500;
   color: var(--gray9);
   white-space: nowrap;
-  text-align: right;
 }
 
 /* Content section */
@@ -149,9 +146,8 @@
 
 @media (max-width: 700px) {
   .dateLabel {
-    left: -1.5rem;
+    right: calc(100% + 2rem);
     font-size: 10px;
-    padding-right: 0.5rem;
   }
 
   .stackChip {
