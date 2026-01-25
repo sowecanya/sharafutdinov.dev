@@ -21,13 +21,8 @@
     "tags": "Revit API • Family Development • AI-assisted workflows",
     "viewProjects": "View Projects",
     "getInTouch": "Get in Touch",
-    "philosophy": {
-      "line1": "Automation first.",
-      "line2": "Human friendly.",
-      "line3": "Ship fast.",
-      "caption": "— My approach to BIM tools development"
-    },
-    "now": "Now",
+    "recentProjects": "Recent Projects",
+    "viewAllProjects": "View all projects",
     "latestWork": "Latest Work",
     "bio": "Bio"
   },
