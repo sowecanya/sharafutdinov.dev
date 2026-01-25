@@ -138,12 +138,8 @@ export default function ExpTileProgression({ item }) {
           {company}
         </h3>
 
-        {/* Progression Timeline */}
-        <ol
-          className={styles.timeline}
-          aria-label={locale === "ru" ? "Карьерный рост" : "Career progression"}
-        >
-          <div className={styles.timelineLine} aria-hidden="true" />
+        {/* Progression - clean list without timeline visuals */}
+        <div className={styles.progression}>
           {item.progression.map((level, index) => {
             const levelDuration = calculateDuration(
               level.startDate,
@@ -154,23 +150,20 @@ export default function ExpTileProgression({ item }) {
             const levelEnd = formatShortDate(level.endDate, locale);
 
             return (
-              <li key={index} className={styles.level}>
-                <div className={styles.levelDot} aria-hidden="true" />
-                <div className={styles.levelContent}>
-                  <h4 className={styles.levelRole}>{localize(level.role)}</h4>
-                  <span className={styles.levelDate}>
-                    {levelStart} – {levelEnd} · {levelDuration}
-                  </span>
-                  <ul className={styles.responsibilities}>
-                    {localize(level.responsibilities).map((resp, i) => (
-                      <li key={i}>{resp}</li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
+              <div key={index} className={styles.level}>
+                <h4 className={styles.levelRole}>{localize(level.role)}</h4>
+                <p className={styles.levelDate}>
+                  {levelStart} – {levelEnd} · {levelDuration}
+                </p>
+                <ul className={styles.responsibilities}>
+                  {localize(level.responsibilities).map((resp, i) => (
+                    <li key={i}>{resp}</li>
+                  ))}
+                </ul>
+              </div>
             );
           })}
-        </ol>
+        </div>
       </div>
     </div>
   );
