@@ -35,11 +35,12 @@
   color: var(--menuLabel);
 }
 
-.input[id="lang-ru"]:checked ~ .glider {
+/* Glider positioning using :nth-of-type to work with any id suffix */
+.input:nth-of-type(1):checked ~ .glider {
   transform: translateX(0);
 }
 
-.input[id="lang-en"]:checked ~ .glider {
+.input:nth-of-type(2):checked ~ .glider {
   transform: translateX(100%);
 }
 
