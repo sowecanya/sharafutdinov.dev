@@ -40,6 +40,7 @@ function TypewriterText({ text }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: text.length * 0.05 + 0.2 }}
+        aria-hidden="true"
       >
         |
       </motion.span>
@@ -101,6 +102,7 @@ export default function Home() {
 
           {/* SKILLS SECTION */}
           <section className={styles.skillsSection}>
+            <h2 className={styles.sectionTitle}>{t("home.skills")}</h2>
             <div className={styles.skillsGrid}>
               {skillsHomeData.categories.map((category) => (
                 <div key={category.id} className={styles.skillCategory}>
@@ -130,6 +132,7 @@ export default function Home() {
                       href: project.url,
                       target: "_blank",
                       rel: "noopener noreferrer",
+                      "aria-label": `${localize(project.title)} (${t("common.opensNewTab")})`,
                     }
                   : {};
 
