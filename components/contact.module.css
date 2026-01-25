@@ -161,10 +161,9 @@
   }
   .item {
     border-radius: 8px;
-
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    height: 3rem;
-    width: 3rem;
+    padding: 0.25rem;
+    height: 2.75rem;
+    width: 2.75rem;
     flex-shrink: 0;
     flex-direction: row;
     justify-content: center;
