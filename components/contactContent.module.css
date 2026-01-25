@@ -70,6 +70,10 @@
 .icon {
   border-radius: 4px;
 }
+
+:global(.dark-theme) .icon {
+  filter: invert(1);
+}
 @media (max-width: 700px) {
   .stack {
     width: 100%;
