@@ -853,13 +853,14 @@
     position: static;
     width: auto;
     border-radius: 0px;
-    padding: 0rem 1rem 4rem;
+    padding: 0rem 1rem 5rem;
     order: 1;
     flex-grow: 1;
     margin-left: 0rem;
     overflow: auto;
     margin: 0rem;
     height: auto;
+    padding-bottom: 80px; /* Space for bottom navigation */
   }
 
   .header {
