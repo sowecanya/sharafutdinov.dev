@@ -23,7 +23,7 @@ function formatDateRange(startDate, endDate, locale) {
   const startStr = `${months[locale][start.getMonth()]} ${start.getFullYear()}`;
   const endStr = endDate 
     ? `${months[locale][end.getMonth()]} ${end.getFullYear()}`
-    : (locale === "ru" ? "настоящее время" : "Present");
+    : (locale === "ru" ? "н.в." : "now");
   
   // Calculate duration
   let totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
@@ -33,24 +33,12 @@ function formatDateRange(startDate, endDate, locale) {
   const remainingMonths = totalMonths % 12;
   
   let duration = "";
-  if (locale === "ru") {
-    if (years > 0) {
-      const yearWord = years === 1 ? "год" : (years < 5 ? "года" : "лет");
-      duration += `${years} ${yearWord}`;
-    }
-    if (remainingMonths > 0) {
-      if (years > 0) duration += " ";
-      const monthWord = remainingMonths === 1 ? "мес" : "мес";
-      duration += `${remainingMonths} ${monthWord}`;
-    }
-  } else {
-    if (years > 0) {
-      duration += `${years} yr${years > 1 ? "s" : ""}`;
-    }
-    if (remainingMonths > 0) {
-      if (years > 0) duration += " ";
-      duration += `${remainingMonths} mo`;
-    }
+  if (years > 0) {
+    duration += `${years}${locale === "ru" ? "г" : "y"}`;
+  }
+  if (remainingMonths > 0) {
+    if (years > 0) duration += " ";
+    duration += `${remainingMonths}${locale === "ru" ? "м" : "m"}`;
   }
   
   return `${startStr} – ${endStr} · ${duration}`;
