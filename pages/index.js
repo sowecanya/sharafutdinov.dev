@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import util from "../styles/util.module.css";
 import styles from "../pages/index.module.css";
 import profile from "../content/data/profile.json";
-import skillsHomeData from "../content/data/skills-home.json";
 import projectsData from "../content/data/projects.json";
 import { useTranslation } from "../lib/i18n";
 
@@ -100,25 +99,9 @@ export default function Home() {
             <p className={styles.heroRole}>{localize(profile.title)}</p>
           </section>
 
-          {/* SKILLS SECTION */}
-          <section className={styles.skillsSection}>
-            <h2 className={styles.sectionTitle}>{t("home.skills")}</h2>
-            <div className={styles.skillsGrid}>
-              {skillsHomeData.categories.map((category) => (
-                <div key={category.id} className={styles.skillCategory}>
-                  <h3 className={styles.skillCategoryTitle}>
-                    {localize(category.title)}
-                  </h3>
-                  <div className={styles.skillChips}>
-                    {category.skills.map((skill) => (
-                      <span key={skill} className={styles.skillChip}>
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+          {/* TAGLINE SECTION */}
+          <section className={styles.taglineSection}>
+            <p className={styles.tagline}>{t("home.tagline")}</p>
           </section>
 
           {/* RECENT PROJECTS SECTION */}
