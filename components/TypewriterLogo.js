@@ -26,10 +26,12 @@ const letter = {
   },
 };
 
-export default function TypewriterLogo() {
+export default function TypewriterLogo({ showOnMobile = false }) {
   return (
     <Link href="/" passHref>
-      <a className={`${styles.container} ${util.hiddenOnMobile}`}>
+      <a
+        className={`${styles.container} ${!showOnMobile ? util.hiddenOnMobile : ""}`}
+      >
         <motion.span
           className={styles.text}
           variants={container}

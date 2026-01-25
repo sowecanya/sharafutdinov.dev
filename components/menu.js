@@ -1,6 +1,7 @@
 import styles from "../components/menu.module.css";
 import { ThemeChanger } from "./theme";
 import { LanguageChanger } from "./LanguageChanger";
+import { SettingsButton } from "./SettingsButton";
 import NavLink from "./navLink";
 import Contact from "./contact";
 import TypewriterLogo from "./TypewriterLogo";
@@ -38,9 +39,16 @@ export default function Menu() {
           <Contact svg="chat" label={t("nav.contact")} shortcut="/" />
         </nav>
       </div>
-      <div>
+
+      {/* Desktop: inline theme/language changers */}
+      <div className={styles.settingsDesktop}>
         <ThemeChanger />
         <LanguageChanger />
+      </div>
+
+      {/* Mobile: settings button that opens drawer */}
+      <div className={styles.settingsMobile}>
+        <SettingsButton />
       </div>
     </div>
   );

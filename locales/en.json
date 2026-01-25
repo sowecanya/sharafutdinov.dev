@@ -5,7 +5,16 @@
     "projects": "Projects",
     "skills": "Skills",
     "contact": "Contact",
-    "stayInTouch": "Stay in touch"
+    "stayInTouch": "Stay in touch",
+    "settings": "Settings"
+  },
+  "settings": {
+    "theme": "Theme",
+    "language": "Language",
+    "description": "Change theme and language preferences"
+  },
+  "common": {
+    "close": "Close"
   },
   "home": {
     "valueProp": "Building productivity tools for AEC industry",
