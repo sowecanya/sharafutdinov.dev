@@ -146,8 +146,11 @@
 
 @media (max-width: 700px) {
   .dateLabel {
-    right: calc(100% + 2rem);
+    position: static;
+    display: block;
     font-size: 10px;
+    margin-bottom: 0.5rem;
+    color: var(--gray9);
   }
 
   .stackChip {
