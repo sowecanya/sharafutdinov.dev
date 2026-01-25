@@ -1,0 +1,63 @@
+.tabs {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  background-color: var(--tabbg);
+  padding: 2.5px;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.tabs * {
+  z-index: 2;
+}
+
+.input[type="radio"] {
+  display: none;
+}
+
+.tab {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.75rem;
+  width: 74.07px;
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: var(--menuLabel);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+
+.input[type="radio"]:checked + label {
+  color: var(--menuLabel);
+}
+
+.input[id="lang-ru"]:checked ~ .glider {
+  transform: translateX(0);
+}
+
+.input[id="lang-en"]:checked ~ .glider {
+  transform: translateX(100%);
+}
+
+.glider {
+  position: absolute;
+  display: flex;
+  height: 1.75rem;
+  width: 74.07px;
+  background-color: var(--highlight);
+  z-index: 1;
+  border-radius: 6px;
+  transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 700px) {
+  .tabs {
+    transform: scale(1.15);
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}

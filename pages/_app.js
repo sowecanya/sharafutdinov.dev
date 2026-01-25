@@ -3,28 +3,34 @@ import { ThemeProvider } from "next-themes";
 import Background from "../components/background";
 import Menu from "../components/menu";
 import toast, { Toaster } from "react-hot-toast";
-import React, { useEffect } from "react";
+import React from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { LanguageProvider, getDefaultLocale } from "../lib/i18n";
 
 function MyApp({ Component, pageProps }) {
+  // Get initial locale from Vercel geo header (passed via pageProps) or default to 'en'
+  const initialLocale = pageProps.initialLocale || "en";
+
   return (
-    <ThemeProvider attribute="class" value={{ dark: "dark-theme" }}>
-      <Toaster
-        toastOptions={{
-          duration: 1500,
-          style: {
-            padding: "3px",
-            borderRadius: "6px",
-            fontSize: "14px",
-          },
-        }}
-      />
-      <div className="base"></div>
-      <Background />
-      <Menu />
-      <Component {...pageProps} />
-      <Analytics />
-    </ThemeProvider>
+    <LanguageProvider initialLocale={initialLocale}>
+      <ThemeProvider attribute="class" value={{ dark: "dark-theme" }}>
+        <Toaster
+          toastOptions={{
+            duration: 1500,
+            style: {
+              padding: "3px",
+              borderRadius: "6px",
+              fontSize: "14px",
+            },
+          }}
+        />
+        <div className="base"></div>
+        <Background />
+        <Menu />
+        <Component {...pageProps} />
+        <Analytics />
+      </ThemeProvider>
+    </LanguageProvider>
   );
 }
 

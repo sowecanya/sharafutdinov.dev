@@ -2,10 +2,22 @@
   "items": [
     {
       "id": "1",
-      "company": "Your Company",
-      "role": "Software Engineer",
-      "date": "2023 - Present",
-      "description": "Building great products.",
+      "company": {
+        "en": "Your Company",
+        "ru": "Ваша Компания"
+      },
+      "role": {
+        "en": "Software Engineer",
+        "ru": "Программист"
+      },
+      "date": {
+        "en": "2023 - Present",
+        "ru": "2023 - настоящее время"
+      },
+      "description": {
+        "en": "Building great products.",
+        "ru": "Создание отличных продуктов."
+      },
       "url": ""
     }
   ]
