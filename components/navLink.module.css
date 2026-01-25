@@ -78,9 +78,9 @@
     display: none;
   }
   .item {
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    height: 3rem;
-    width: 3rem;
+    padding: 0.25rem;
+    height: 2.75rem;
+    width: 2.75rem;
     flex-shrink: 0;
     flex-direction: row;
     justify-content: center;
@@ -92,7 +92,7 @@
   }
   .logoIcon {
     border-radius: 4px;
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
   }
 }
