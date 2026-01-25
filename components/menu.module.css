@@ -29,6 +29,14 @@
   padding: 6px;
 }
 
+.settingsDesktop {
+  display: block;
+}
+
+.settingsMobile {
+  display: none;
+}
+
 @media (max-width: 700px) {
   .container {
     padding: 0.375rem 1.5rem 0.5rem 0.375rem;
@@ -66,5 +74,14 @@
   .nav {
     display: flex;
     flex-direction: row;
+  }
+
+  .settingsDesktop {
+    display: none;
+  }
+
+  .settingsMobile {
+    display: flex;
+    flex-shrink: 0;
   }
 }
