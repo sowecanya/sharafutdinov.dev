@@ -1,6 +1,52 @@
 import styles from "./expTileProgression.module.css";
+import expTileStyles from "./expTile.module.css";
 import util from "../../styles/util.module.css";
 import { useTranslation } from "../../lib/i18n";
+
+function formatFullDate(dateStr, endDate, locale) {
+  const months = {
+    en: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ],
+    ru: [
+      "Январь",
+      "Февраль",
+      "Март",
+      "Апрель",
+      "Май",
+      "Июнь",
+      "Июль",
+      "Август",
+      "Сентябрь",
+      "Октябрь",
+      "Ноябрь",
+      "Декабрь",
+    ],
+  };
+  const start = new Date(dateStr);
+  const startStr = `${months[locale][start.getMonth()]} ${start.getFullYear()}`;
+
+  let endStr;
+  if (endDate) {
+    const end = new Date(endDate);
+    endStr = `${months[locale][end.getMonth()]} ${end.getFullYear()}`;
+  } else {
+    endStr = locale === "ru" ? "настоящее время" : "Present";
+  }
+
+  return `${startStr} – ${endStr}`;
+}
 
 function formatShortDate(dateStr, locale) {
   const months = {
@@ -72,89 +118,59 @@ function calculateDuration(startDate, endDate, locale) {
 }
 
 export default function ExpTileProgression({ item }) {
-  const { localize, locale, t } = useTranslation();
+  const { localize, locale } = useTranslation();
   const company = localize(item.company);
   const totalDuration = calculateDuration(item.startDate, item.endDate, locale);
-  const startStr = formatShortDate(item.startDate, locale);
-  const endStr = item.endDate
-    ? formatShortDate(item.endDate, locale)
-    : locale === "ru"
-      ? "настоящее время"
-      : "Present";
+  const dateRange = formatFullDate(item.startDate, item.endDate, locale);
 
   return (
-    <div className={styles.container}>
-      {/* Header */}
-      <div className={styles.header}>
-        <h3 className={util.tileTitle}>{company}</h3>
-        <span className={styles.totalDate}>
-          {startStr} – {endStr} · {totalDuration}
-        </span>
+    <div className={expTileStyles.container}>
+      {/* Date column - same as ExpTile */}
+      <div>
+        <p className={expTileStyles.date}>
+          {dateRange} · {totalDuration}
+        </p>
       </div>
 
-      {/* Progression Timeline */}
-      <ol
-        className={styles.timeline}
-        aria-label={locale === "ru" ? "Карьерный рост" : "Career progression"}
-      >
-        <div className={styles.timelineLine} aria-hidden="true" />
-        {item.progression.map((level, index) => {
-          const levelDuration = calculateDuration(
-            level.startDate,
-            level.endDate,
-            locale,
-          );
-          const levelStart = formatShortDate(level.startDate, locale);
-          const levelEnd = formatShortDate(level.endDate, locale);
+      {/* Content column */}
+      <div className={expTileStyles.stack}>
+        <h3 className={util.tileTitle + " " + expTileStyles.inline}>
+          {company}
+        </h3>
 
-          return (
-            <li key={index} className={styles.level}>
-              <div className={styles.levelDot} aria-hidden="true" />
-              <div className={styles.levelContent}>
-                <h4 className={styles.levelRole}>{localize(level.role)}</h4>
-                <span className={styles.levelDate}>
-                  {levelStart} – {levelEnd} · {levelDuration}
-                </span>
-                <ul className={styles.responsibilities}>
-                  {localize(level.responsibilities).map((resp, i) => (
-                    <li key={i}>{resp}</li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-          );
-        })}
-      </ol>
+        {/* Progression Timeline */}
+        <ol
+          className={styles.timeline}
+          aria-label={locale === "ru" ? "Карьерный рост" : "Career progression"}
+        >
+          <div className={styles.timelineLine} aria-hidden="true" />
+          {item.progression.map((level, index) => {
+            const levelDuration = calculateDuration(
+              level.startDate,
+              level.endDate,
+              locale,
+            );
+            const levelStart = formatShortDate(level.startDate, locale);
+            const levelEnd = formatShortDate(level.endDate, locale);
 
-      {/* Footer: Projects, Docs, Stack */}
-      <div className={styles.footer}>
-        {item.projects && (
-          <div className={styles.footerRow}>
-            <span className={styles.footerLabel}>
-              {t("experience.projects")}:
-            </span>
-            <span className={styles.footerValue}>
-              {localize(item.projects).join(", ")}
-            </span>
-          </div>
-        )}
-        {item.documentation && (
-          <div className={styles.footerRow}>
-            <span className={styles.footerLabel}>{t("experience.docs")}:</span>
-            <span className={styles.footerValue}>
-              {item.documentation.join(", ")}
-            </span>
-          </div>
-        )}
-        {item.stack && (
-          <div className={styles.stackRow}>
-            {item.stack.map((tech, i) => (
-              <span key={i} className={styles.stackChip}>
-                {tech}
-              </span>
-            ))}
-          </div>
-        )}
+            return (
+              <li key={index} className={styles.level}>
+                <div className={styles.levelDot} aria-hidden="true" />
+                <div className={styles.levelContent}>
+                  <h4 className={styles.levelRole}>{localize(level.role)}</h4>
+                  <span className={styles.levelDate}>
+                    {levelStart} – {levelEnd} · {levelDuration}
+                  </span>
+                  <ul className={styles.responsibilities}>
+                    {localize(level.responsibilities).map((resp, i) => (
+                      <li key={i}>{resp}</li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
       </div>
     </div>
   );

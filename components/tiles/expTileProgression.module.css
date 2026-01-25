@@ -1,28 +1,10 @@
-.container {
-  padding: 1.5rem 0;
-  width: 100%;
-}
-
-/* Header */
-.header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.totalDate {
-  font-size: var(--font-m);
-  color: var(--gray10);
-}
-
 /* Timeline */
 .timeline {
   position: relative;
   padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
   list-style: none;
-  margin-top: 0;
 }
 
 .timelineLine {
@@ -95,48 +77,6 @@
   margin-bottom: 0;
 }
 
-/* Footer */
-.footer {
-  padding-top: 1rem;
-  border-top: 1px solid var(--gray4);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.footerRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  font-size: var(--font-s);
-}
-
-.footerLabel {
-  color: var(--gray9);
-  font-weight: 500;
-}
-
-.footerValue {
-  color: var(--gray11);
-}
-
-.stackRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.stackChip {
-  font-size: var(--font-s);
-  font-weight: 500;
-  color: var(--gray11);
-  background: var(--gray3);
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  white-space: nowrap;
-}
-
 /* Mobile */
 @media (max-width: 700px) {
   .timeline {
@@ -155,10 +95,6 @@
 
   .levelRole {
     font-size: var(--font-m);
-  }
-
-  .responsibilities {
-    padding-left: 1rem;
   }
 
   .responsibilities li {
