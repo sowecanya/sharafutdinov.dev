@@ -154,6 +154,14 @@ export default function ContactContent() {
               aria-label={`View ${p.name} profile`}
               onClick={() => trackSocialClick(p.id)}
             >
+              <Image
+                className={styles.icon}
+                priority
+                src={`/icons/${p.id}.svg`}
+                height={18}
+                width={18}
+                alt=""
+              />
               <span className={util.iconButtonText}>{p.name}</span>
             </a>
           ))}
