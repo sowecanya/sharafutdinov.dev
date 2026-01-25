@@ -161,8 +161,10 @@ export default function Home() {
                 );
               })}
             </ul>
-            <Link href="/projects" className={styles.viewAllLink}>
-              {t("home.viewAllProjects")} →
+            <Link href="/projects">
+              <a className={styles.viewAllLink}>
+                {t("home.viewAllProjects")} →
+              </a>
             </Link>
           </section>
         </div>
