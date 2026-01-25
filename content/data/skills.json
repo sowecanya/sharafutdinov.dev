@@ -1,6 +1,35 @@
 {
   "categories": [
     {
+      "id": "fundamentals",
+      "title": {
+        "en": "CS Fundamentals",
+        "ru": "Основы CS"
+      },
+      "items": [
+        {
+          "name": "Algorithms & Data Structures",
+          "tags": ["Arrays", "Trees", "Graphs", "Sorting", "Dynamic Programming", "LeetCode"]
+        },
+        {
+          "name": "Design Principles",
+          "tags": ["SOLID", "KISS", "DRY", "YAGNI", "Composition over Inheritance"]
+        },
+        {
+          "name": "Architecture Patterns",
+          "tags": ["Clean Architecture", "MVC", "MVVM", "Repository", "DI/IoC"]
+        },
+        {
+          "name": "Design Patterns",
+          "tags": ["Factory", "Singleton", "Observer", "Strategy", "Decorator"]
+        },
+        {
+          "name": "System Design",
+          "tags": ["API Design", "Microservices", "Caching", "Load Balancing"]
+        }
+      ]
+    },
+    {
       "id": "programming",
       "title": {
         "en": "Programming Languages",
