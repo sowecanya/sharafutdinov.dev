@@ -89,17 +89,18 @@
 }
 
 .tagline {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 450;
   color: var(--gray12);
-  margin: 0;
+  margin: 0 auto;
+  max-width: 600px;
   font-style: italic;
   letter-spacing: -0.02em;
   line-height: 1.4;
 }
 @media (max-width: 700px) {
   .tagline {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -107,7 +108,7 @@
    RECENT PROJECTS SECTION
    ============================================ */
 .recentProjectsSection {
-  margin-top: 0;
+  margin-top: 2rem;
   margin-bottom: 5rem;
   animation: fadeUp 0.6s ease-out 0.2s backwards;
   max-width: 560px;
@@ -126,6 +127,7 @@
   height: 100px;
   background: linear-gradient(to bottom, transparent 0%, var(--bg) 90%);
   pointer-events: none;
+  z-index: 2;
 }
 
 @media (max-width: 700px) {
