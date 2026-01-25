@@ -16,7 +16,9 @@
 
 .rightBorder {
   border-right: 1px solid var(--gray4);
-  transition: background-color 0.2s ease, border 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border 0.2s ease;
 }
 
 .textButton {
@@ -33,6 +35,10 @@
 }
 .textButton:hover {
   background-color: var(--gray4);
+}
+.textButton:focus-visible {
+  outline: 2px solid var(--gray11);
+  outline-offset: 2px;
 }
 
 .row {

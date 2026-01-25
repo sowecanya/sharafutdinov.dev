@@ -1,7 +1,6 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
-import styles from "./contact.module.css";
 import ContactContent from "../components/contactContent";
 import profile from "../content/data/profile.json";
 import { useTranslation } from "../lib/i18n";
@@ -34,11 +33,9 @@ export default function Contact() {
       </Head>
       <main className={util.page} id="contactPage">
         <div className={util.pageColumn}>
-          <div className={styles.hero}>
-            <h1 className={util.header}>{t("contact.title")}</h1>
-            <p className={styles.subtitle}>{t("contact.pageSubtitle")}</p>
-          </div>
-          <div className={styles.contactSection}>
+          <h1 className={util.header}>{t("contact.title")}</h1>
+          <p className={util.description}>{t("contact.pageSubtitle")}</p>
+          <div className={util.inset}>
             <ContactContent />
           </div>
         </div>

@@ -86,6 +86,7 @@ export default function ContactContent() {
               href={profile.social.telegram}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Contact via Telegram"
               onClick={() => trackSocialClick("telegram")}
             >
               <Image
@@ -94,7 +95,7 @@ export default function ContactContent() {
                 src={"/icons/telegram.svg"}
                 height={18}
                 width={18}
-                alt="telegram"
+                alt=""
               />
               <span className={util.iconButtonText}>Telegram</span>
             </a>
@@ -105,6 +106,7 @@ export default function ContactContent() {
               href={profile.social.github}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View GitHub profile"
               onClick={() => trackSocialClick("github")}
             >
               <Image
@@ -113,7 +115,7 @@ export default function ContactContent() {
                 src={"/icons/github.svg"}
                 height={18}
                 width={18}
-                alt="github"
+                alt=""
               />
               <span className={util.iconButtonText}>GitHub</span>
             </a>
@@ -124,6 +126,7 @@ export default function ContactContent() {
               href={profile.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View LinkedIn profile"
               onClick={() => trackSocialClick("linkedin")}
             >
               <Image
@@ -132,7 +135,7 @@ export default function ContactContent() {
                 src={"/icons/linkedin.svg"}
                 height={18}
                 width={18}
-                alt="linkedin"
+                alt=""
               />
               <span className={util.iconButtonText}>LinkedIn</span>
             </a>
@@ -143,6 +146,7 @@ export default function ContactContent() {
               href={profile.social.twitter}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View Twitter profile"
               onClick={() => trackSocialClick("twitter")}
             >
               <Image
@@ -151,7 +155,7 @@ export default function ContactContent() {
                 src={"/icons/twitter.svg"}
                 height={18}
                 width={18}
-                alt="twitter"
+                alt=""
               />
               <span className={util.iconButtonText}>Twitter</span>
             </a>
