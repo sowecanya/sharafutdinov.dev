@@ -3,7 +3,6 @@ import { ThemeChanger } from "./theme";
 import { LanguageChanger } from "./LanguageChanger";
 import { SettingsButton } from "./SettingsButton";
 import NavLink from "./navLink";
-import Contact from "./contact";
 import TypewriterLogo from "./TypewriterLogo";
 import { useTranslation } from "../lib/i18n";
 
@@ -36,7 +35,12 @@ export default function Menu() {
             shortcut="4"
           />
           <p className={styles.divider}>{t("nav.stayInTouch")}</p>
-          <Contact svg="chat" label={t("nav.contact")} shortcut="/" />
+          <NavLink
+            svg="chat"
+            href="/contact"
+            label={t("nav.contact")}
+            shortcut="5"
+          />
         </nav>
       </div>
 
