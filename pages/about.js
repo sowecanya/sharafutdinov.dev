@@ -177,7 +177,24 @@ export default function About() {
                       key={cert.id}
                       date={cert.year}
                       title={localize(cert.title)}
+                      url={cert.url}
                       content={cert.issuer}
+                    />
+                  ))}
+                </div>
+                <div style={{ marginTop: "2rem" }}>
+                  <h3
+                    className={util.tileTitle}
+                    style={{ marginBottom: "0.5rem" }}
+                  >
+                    {t("education.profiles")}
+                  </h3>
+                  {profile.profiles.map((p) => (
+                    <ExpTile
+                      key={p.id}
+                      title={p.name}
+                      url={p.url}
+                      content={localize(p.description)}
                     />
                   ))}
                 </div>

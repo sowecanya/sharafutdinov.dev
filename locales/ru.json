@@ -45,6 +45,7 @@
   "education": {
     "degree": "Образование",
     "certifications": "Сертификаты",
+    "profiles": "Профили",
     "gpa": "Средний балл"
   },
   "story": {
