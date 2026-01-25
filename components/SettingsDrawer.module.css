@@ -43,13 +43,14 @@
 .sectionsRow {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
+  padding: 0 0.5rem;
 }
 
 .section {
   flex: 1;
-  max-width: 200px;
+  min-width: 0;
 }
 
 .sectionTitle {
