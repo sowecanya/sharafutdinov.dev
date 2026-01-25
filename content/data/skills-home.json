@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "id": "bim",
+      "title": {
+        "en": "BIM",
+        "ru": "BIM"
+      },
+      "skills": ["Revit API", "Navisworks", "Dynamo"]
+    },
+    {
+      "id": "development",
+      "title": {
+        "en": "Development",
+        "ru": "Разработка"
+      },
+      "skills": ["C# / .NET", "Python", "WPF / XAML"]
+    },
+    {
+      "id": "ai",
+      "title": {
+        "en": "AI",
+        "ru": "AI"
+      },
+      "skills": ["Claude Code", "Agentic Workflows"]
+    }
+  ]
+}

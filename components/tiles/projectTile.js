@@ -25,8 +25,8 @@ export default function ProjectTile({
 
   return (
     <li className={styles.outer}>
+      <span className={styles.dateLabel}>{date}</span>
       <Wrapper className={styles.container} {...wrapperProps}>
-        <span className={styles.dateBadge}>{date}</span>
         {image && (
           <div className={styles.imageWrapper}>
             <Image

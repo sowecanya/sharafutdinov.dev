@@ -1,10 +1,12 @@
 import Head from "next/head";
-import React, { useEffect } from "react";
+import Link from "next/link";
+import React, { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import util from "../styles/util.module.css";
 import styles from "../pages/index.module.css";
 import profile from "../content/data/profile.json";
-import nowData from "../content/data/now.json";
+import skillsHomeData from "../content/data/skills-home.json";
+import projectsData from "../content/data/projects.json";
 import { useTranslation } from "../lib/i18n";
 
 // Typewriter effect component
@@ -46,7 +48,23 @@ function TypewriterText({ text }) {
 }
 
 export default function Home() {
-  const { t, localize } = useTranslation();
+  const { t, localize, locale } = useTranslation();
+
+  // Get 3 most recent projects
+  const recentProjects = useMemo(() => {
+    return [...projectsData.items]
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 3);
+  }, []);
+
+  // Format date for display
+  const formatProjectDate = (dateStr) => {
+    const date = new Date(dateStr);
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear().toString().slice(-2);
+    const monthName = t(`months.${month}`);
+    return `${monthName} ${year}`;
+  };
 
   useEffect(() => {
     let thisPage = document.querySelector("#recentsPage");
@@ -81,29 +99,68 @@ export default function Home() {
             <p className={styles.heroRole}>{localize(profile.title)}</p>
           </section>
 
-          {/* PHILOSOPHY SECTION */}
-          <section className={styles.philosophySection}>
-            <blockquote className={styles.philosophyQuote}>
-              <span>{t("home.philosophy.line1")}</span>
-              <span>{t("home.philosophy.line2")}</span>
-              <span>{t("home.philosophy.line3")}</span>
-            </blockquote>
-            <p className={styles.philosophyCaption}>
-              {t("home.philosophy.caption")}
-            </p>
+          {/* SKILLS SECTION */}
+          <section className={styles.skillsSection}>
+            <div className={styles.skillsGrid}>
+              {skillsHomeData.categories.map((category) => (
+                <div key={category.id} className={styles.skillCategory}>
+                  <h3 className={styles.skillCategoryTitle}>
+                    {localize(category.title)}
+                  </h3>
+                  <div className={styles.skillChips}>
+                    {category.skills.map((skill) => (
+                      <span key={skill} className={styles.skillChip}>
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </section>
 
-          {/* NOW SECTION */}
-          <section className={styles.nowSection}>
-            <h2 className={styles.sectionTitle}>{t("home.now")}</h2>
-            <ul className={styles.nowList}>
-              {nowData.items.map((item, i) => (
-                <li key={i} className={styles.nowItem}>
-                  <span className={styles.nowEmoji}>{item.emoji}</span>
-                  <span className={styles.nowText}>{localize(item.text)}</span>
-                </li>
-              ))}
+          {/* RECENT PROJECTS SECTION */}
+          <section className={styles.recentProjectsSection}>
+            <h2 className={styles.sectionTitle}>{t("home.recentProjects")}</h2>
+            <ul className={styles.recentProjectsList}>
+              {recentProjects.map((project) => {
+                const Wrapper = project.url ? "a" : "div";
+                const wrapperProps = project.url
+                  ? {
+                      href: project.url,
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    }
+                  : {};
+
+                return (
+                  <li key={project.id} className={styles.recentProjectItem}>
+                    <Wrapper
+                      className={styles.recentProjectLink}
+                      {...wrapperProps}
+                    >
+                      <span className={styles.recentProjectTitle}>
+                        {localize(project.title)}
+                        {project.url && (
+                          <span className={styles.externalIcon}>↗</span>
+                        )}
+                      </span>
+                      <span className={styles.recentProjectMeta}>
+                        <span className={styles.recentProjectType}>
+                          {localize(project.type)}
+                        </span>
+                        <span className={styles.recentProjectDate}>
+                          {formatProjectDate(project.date)}
+                        </span>
+                      </span>
+                    </Wrapper>
+                  </li>
+                );
+              })}
             </ul>
+            <Link href="/projects" className={styles.viewAllLink}>
+              {t("home.viewAllProjects")} →
+            </Link>
           </section>
         </div>
       </main>
