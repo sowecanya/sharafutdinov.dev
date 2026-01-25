@@ -44,40 +44,20 @@ export function SettingsDrawer({ open, onOpenChange }) {
                   {t("settings.description")}
                 </Dialog.Description>
 
-                <div className={styles.header}>
-                  <div className={styles.handle} aria-hidden="true" />
-                  <Dialog.Close asChild>
-                    <button
-                      className={styles.closeButton}
-                      aria-label={t("common.close")}
-                    >
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <line x1="18" y1="6" x2="6" y2="18" />
-                        <line x1="6" y1="6" x2="18" y2="18" />
-                      </svg>
-                    </button>
-                  </Dialog.Close>
-                </div>
+                <div className={styles.handle} aria-hidden="true" />
 
-                <div className={styles.section}>
-                  <h2 className={styles.sectionTitle}>{t("settings.theme")}</h2>
-                  <ThemeChanger idSuffix="-drawer" />
-                </div>
+                <div className={styles.sectionsRow}>
+                  <div className={styles.section}>
+                    <h2 className={styles.sectionTitle}>{t("settings.theme")}</h2>
+                    <ThemeChanger idSuffix="-drawer" />
+                  </div>
 
-                <div className={styles.section}>
-                  <h2 className={styles.sectionTitle}>
-                    {t("settings.language")}
-                  </h2>
-                  <LanguageChanger idSuffix="-drawer" />
+                  <div className={styles.section}>
+                    <h2 className={styles.sectionTitle}>
+                      {t("settings.language")}
+                    </h2>
+                    <LanguageChanger idSuffix="-drawer" />
+                  </div>
                 </div>
               </motion.div>
             </Dialog.Content>
