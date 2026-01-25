@@ -3,38 +3,66 @@
     "en": "My Story",
     "ru": "Моя история"
   },
-  "paragraphs": [
+  "blocks": [
     {
-      "en": "In 10th grade, I got a test assignment — build Doodle Jump using C# and Unity. Spent tons of time on it but never finished. Still got into the team though — they said what mattered wasn't the result, but how I approached it. The startup shut down quickly, and I wasn't much help — but I was already hooked.",
-      "ru": "В 10 классе получил тестовое задание — сделать Doodle Jump на C# + Unity. Убил кучу времени, но так и не доделал. Но в команду всё равно взяли, сказали главное не результат, а как я к нему шел. Стартап быстро закрылся, пользы от меня было мало — но меня уже зацепило."
+      "title": {
+        "en": "The Beginning",
+        "ru": "Начало"
+      },
+      "content": {
+        "en": "In 10th grade, I got a test assignment — build Doodle Jump using C# and Unity. Spent tons of time on it but never finished. Still got into the team though — they said what mattered wasn't the result, but how I approached it. The startup shut down quickly, and I wasn't much help — but I was already hooked.",
+        "ru": "В 10 классе получил тестовое задание — сделать Doodle Jump на C# + Unity. Убил кучу времени, но так и не доделал. Но в команду всё равно взяли, сказали главное не результат, а как я к нему шел. Стартап быстро закрылся, пользы от меня было мало — но меня уже зацепило."
+      }
     },
     {
-      "en": "A year later I started learning Python — bought courses on Skillbox, did the homework, completed the capstone project. I applied these skills in real life too: automating routine tasks for data collection, planning, analytics. In university, programming came in handy as well. In my senior years we covered Python and the Pandas/NumPy libraries I'd already explored inside out. For my thesis, I decided to build a mobile app in Kotlin.",
-      "ru": "Через год я уже начал изучать Python, приобрел курсы на Skillbox, учился, делал домашние задания, дипломный проект, параллельно применяя все эти навыки и в жизни, например, автоматизируя рутинные задачи по сбору информации, планированию, аналитике и так далее. В университете тоже знания программирования пригодились, на старших курсах мы как раз коснулись Python и, на то время мной перерытых вдоль и поперек, библиотек Pandas и Numpy, а дальше я решил взять в качестве дипломного проекта мобильное приложение на Kotlin."
+      "title": {
+        "en": "Learning",
+        "ru": "Обучение"
+      },
+      "content": {
+        "en": "A year later I started learning Python — bought courses on Skillbox, did the homework, completed the capstone project. I applied these skills in real life too: automating routine tasks for data collection, planning, analytics. In university, programming came in handy as well. In my senior years we covered Python and the Pandas/NumPy libraries I'd already explored inside out. For my thesis, I decided to build a mobile app in Kotlin.",
+        "ru": "Через год я уже начал изучать Python, приобрел курсы на Skillbox, учился, делал домашние задания, дипломный проект, параллельно применяя все эти навыки и в жизни, например, автоматизируя рутинные задачи по сбору информации, планированию, аналитике и так далее. В университете тоже знания программирования пригодились, на старших курсах мы как раз коснулись Python и, на то время мной перерытых вдоль и поперек, библиотек Pandas и Numpy, а дальше я решил взять в качестве дипломного проекта мобильное приложение на Kotlin."
+      }
     },
     {
-      "en": "After university came a long job search. Eventually, MARKS GROUP found me — and a couple months later I was in Moscow, working as an automation systems engineer. It was tough: new city, new people, new software. Had to learn Revit from scratch since I'd never touched it before. Over time I started coordinating the team, which gave me even more motivation to focus on BIM.",
-      "ru": "Дальше, после универа, меня ждали долгие поиски работы. В итоге меня нашли MARKS GROUP — и через пару месяцев я уже был в Москве, проектировщиком систем автоматизации. Было тяжело: новый город, новые люди, новый софт. Пришлось изучать Revit с самого нуля, так как ранее я с ним не сталкивался. Со временем стал координировать группу, что дало мне ещё большую мотивацию заниматься именно BIM."
+      "title": {
+        "en": "MARKS GROUP",
+        "ru": "MARKS GROUP"
+      },
+      "content": {
+        "en": "After university came a long job search. Eventually, MARKS GROUP found me — and a couple months later I was in Moscow, working as an automation systems engineer. It was tough: new city, new people, new software. Had to learn Revit from scratch since I'd never touched it before. Over time I started coordinating the team, which gave me even more motivation to focus on BIM.",
+        "ru": "Дальше, после универа, меня ждали долгие поиски работы. В итоге меня нашли MARKS GROUP — и через пару месяцев я уже был в Москве, проектировщиком систем автоматизации. Было тяжело: новый город, новые люди, новый софт. Пришлось изучать Revit с самого нуля, так как ранее я с ним не сталкивался. Со временем стал координировать группу, что дало мне ещё большую мотивацию заниматься именно BIM."
+      }
     },
     {
-      "en": "When I changed jobs, I was specifically looking for a BIM position. That's how I found R1 — a design bureau. Now I'm here learning and growing: family development, file coordination, analytics, plugin testing, writing documentation. On the side, I try to come up with automation ideas — and in my free time I'm building DSTools, my own suite of Revit plugins. Planning to roll it out to colleagues and battle-test it.",
-      "ru": "Когда менял работу — уже целенаправленно искал позицию в BIM. Так нашёл Р1 — проектное бюро. Сейчас здесь учусь и расту: разработка семейств, координация файлов, аналитика, тестирование плагинов, подготовка инструкций. Параллельно стараюсь придумывать идеи для автоматизации — и в свободное время пилю DSTools, свою линейку плагинов для Revit. Планирую внедрить среди коллег, потестить в бою."
+      "title": {
+        "en": "R1",
+        "ru": "Р1"
+      },
+      "content": {
+        "en": "When I changed jobs, I was specifically looking for a BIM position. That's how I found R1 — a design bureau. Now I'm here learning and growing: family development, file coordination, analytics, plugin testing, writing documentation. On the side, I try to come up with automation ideas — and in my free time I'm building DSTools, my own suite of Revit plugins. Planning to roll it out to colleagues and battle-test it.",
+        "ru": "Когда менял работу — уже целенаправленно искал позицию в BIM. Так нашёл Р1 — проектное бюро. Сейчас здесь учусь и расту: разработка семейств, координация файлов, аналитика, тестирование плагинов, подготовка инструкций. Параллельно стараюсь придумывать идеи для автоматизации — и в свободное время пилю DSTools, свою линейку плагинов для Revit. Планирую внедрить среди коллег, потестить в бою."
+      }
     },
     {
-      "en": "What drives me? When people actually use what you've built. When real users see it exists. When a thousand planning tasks turn into a tangible result. Recently I built an MVP in a week that was supposed to take a year. That's when you understand what it's all for.",
-      "ru": "Что драйвит? Когда твоим продуктом пользуются. Когда реальные люди заходят и видят — это существует. Когда тысяча задач по планированию превращается в результат. Недавно за неделю собрал MVP, который по плану должен был занять год. Вот тогда понимаешь, ради чего всё это."
+      "title": {
+        "en": "What Drives Me",
+        "ru": "Что драйвит"
+      },
+      "content": {
+        "en": "When people actually use what you've built. When real users see it exists. When a thousand planning tasks turn into a tangible result. Recently I built an MVP in a week that was supposed to take a year. That's when you understand what it's all for.\n\nAI for me is like the arrival of electricity. It replaces the routine and lets you focus on what actually matters.",
+        "ru": "Когда твоим продуктом пользуются. Когда реальные люди заходят и видят — это существует. Когда тысяча задач по планированию превращается в результат. Недавно за неделю собрал MVP, который по плану должен был занять год. Вот тогда понимаешь, ради чего всё это.\n\nAI для меня — как появление электричества когда-то. Он заменяет рутину и даёт думать о том, что действительно важно и интересно."
+      }
     },
     {
-      "en": "AI for me is like the arrival of electricity. It replaces the routine and lets you focus on what actually matters.",
-      "ru": "AI для меня — как появление электричества когда-то. Он заменяет рутину и даёт думать о том, что действительно важно и интересно."
-    },
-    {
-      "en": "In 2-3 years I see myself as a confident developer with a clear direction. Surrounded by colleagues moving the same way, supporting and motivating each other. I want to build products people will actually use — not throwaway stuff for quick cash, but real tools that genuinely help.",
-      "ru": "Через 2-3 года вижу себя уверенным разработчиком с чётким направлением. Рядом коллеги, которые движутся туда же, поддерживают и мотивируют. Хочу создавать продукты, которыми будут пользоваться: не одноразовые для быстрого заработка, а полноценные, реально полезные людям."
-    },
-    {
-      "en": "And the bold dream? Start a venture fund. Give life to other people's ambitious projects. Be there at the beginning of great things built by future great people.",
-      "ru": "А дерзкая мечта? Открыть венчурный фонд. Давать жизнь амбициозным проектам других. Стоять у истоков великих дел будущих великих людей."
+      "title": {
+        "en": "Where I'm Heading",
+        "ru": "Куда иду"
+      },
+      "content": {
+        "en": "In 2-3 years I see myself as a confident developer with a clear direction. Surrounded by colleagues moving the same way, supporting and motivating each other. I want to build products people will actually use — not throwaway stuff for quick cash, but real tools that genuinely help.\n\nAnd the bold dream? Start a venture fund. Give life to other people's ambitious projects. Be there at the beginning of great things built by future great people.",
+        "ru": "Через 2-3 года вижу себя уверенным разработчиком с чётким направлением. Рядом коллеги, которые движутся туда же, поддерживают и мотивируют. Хочу создавать продукты, которыми будут пользоваться: не одноразовые для быстрого заработка, а полноценные, реально полезные людям.\n\nА дерзкая мечта? Открыть венчурный фонд. Давать жизнь амбициозным проектам других. Стоять у истоков великих дел будущих великих людей."
+      }
     }
   ]
 }
