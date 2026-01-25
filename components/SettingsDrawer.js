@@ -2,7 +2,6 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ThemeChanger } from "./theme";
 import { LanguageChanger } from "./LanguageChanger";
-import TypewriterLogo from "./TypewriterLogo";
 import styles from "./SettingsDrawer.module.css";
 import { useTranslation } from "../lib/i18n";
 
@@ -67,10 +66,6 @@ export function SettingsDrawer({ open, onOpenChange }) {
                       </svg>
                     </button>
                   </Dialog.Close>
-                </div>
-
-                <div className={styles.logoSection}>
-                  <TypewriterLogo showOnMobile />
                 </div>
 
                 <div className={styles.section}>

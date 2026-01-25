@@ -48,15 +48,16 @@
   color: var(--menuLabel);
 }
 
-.input[id="radio-1"]:checked ~ .glider {
+/* Glider positioning using :nth-of-type to work with any id suffix */
+.input:nth-of-type(1):checked ~ .glider {
   transform: translateX(0);
 }
 
-.input[id="radio-2"]:checked ~ .glider {
+.input:nth-of-type(2):checked ~ .glider {
   transform: translateX(100%);
 }
 
-.input[id="radio-3"]:checked ~ .glider {
+.input:nth-of-type(3):checked ~ .glider {
   transform: translateX(200%);
 }
 
