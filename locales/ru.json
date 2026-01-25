@@ -100,5 +100,9 @@
   "timeline": {
     "start": "планирую",
     "end": "мечтаю"
+  },
+  "experience": {
+    "projects": "Проекты",
+    "docs": "Документация"
   }
 }
