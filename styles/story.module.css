@@ -1,41 +1,56 @@
 .storyContainer {
   padding-top: 0.5rem;
-}
-
-.narrative {
   max-width: 650px;
 }
 
-.paragraph {
-  font-size: var(--font-l);
-  color: var(--gray11);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+.block {
+  margin-bottom: 2.5rem;
 }
 
-.paragraph:last-child {
+.block:last-child {
   margin-bottom: 0;
 }
 
-/* Make first paragraph slightly larger */
-.paragraph:first-child {
-  font-size: calc(var(--font-l) * 1.05);
+.blockTitle {
+  font-size: var(--font-m);
+  font-weight: 600;
+  color: var(--gray10);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
 }
 
-/* Highlight last paragraph (the dream) */
-.paragraph:last-child {
+.blockContent {
+  font-size: var(--font-l);
+  color: var(--gray11);
+  line-height: 1.7;
+}
+
+.blockContent p {
+  margin-bottom: 1rem;
+}
+
+.blockContent p:last-child {
+  margin-bottom: 0;
+}
+
+/* Last block (dream) - make it stand out */
+.block:last-child .blockContent {
   color: var(--gray12);
-  font-weight: 450;
 }
 
 @media (max-width: 700px) {
-  .paragraph {
+  .block {
+    margin-bottom: 2rem;
+  }
+
+  .blockTitle {
+    font-size: var(--font-s);
+    margin-bottom: 0.5rem;
+  }
+
+  .blockContent {
     font-size: var(--font-m);
     line-height: 1.65;
-    margin-bottom: 1.25rem;
-  }
-  
-  .paragraph:first-child {
-    font-size: var(--font-l);
   }
 }

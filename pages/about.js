@@ -116,13 +116,18 @@ export default function About() {
             )}
             {activeTab === "story" && (
               <div className={styles.storyContainer}>
-                <article className={styles.narrative}>
-                  {storyData.paragraphs.map((paragraph, index) => (
-                    <p key={index} className={styles.paragraph}>
-                      {localize(paragraph)}
-                    </p>
-                  ))}
-                </article>
+                {storyData.blocks.map((block, index) => (
+                  <section key={index} className={styles.block}>
+                    <h3 className={styles.blockTitle}>
+                      {localize(block.title)}
+                    </h3>
+                    <div className={styles.blockContent}>
+                      {localize(block.content).split('\n\n').map((paragraph, pIndex) => (
+                        <p key={pIndex}>{paragraph}</p>
+                      ))}
+                    </div>
+                  </section>
+                ))}
               </div>
             )}
           </div>
