@@ -1,9 +1,17 @@
 {
   "name": "Dinar Sharafutdinov",
-  "title": "Software Engineer",
-  "greeting": "Hello",
-  "bio": "I'm a software engineer passionate about building great products. Welcome to my corner of the internet.",
-  "description": "Personal portfolio and projects showcase.",
+  "title": {
+    "en": "Software Engineer",
+    "ru": "Программист"
+  },
+  "bio": {
+    "en": "I'm a software engineer passionate about building great products. Welcome to my corner of the internet.",
+    "ru": "Программист, увлечённый созданием отличных продуктов. Добро пожаловать в мой уголок интернета."
+  },
+  "description": {
+    "en": "Personal portfolio and projects showcase.",
+    "ru": "Персональное портфолио и проекты."
+  },
   "social": {
     "github": "https://github.com/sowecanya",
     "telegram": "",

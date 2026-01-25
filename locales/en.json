@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "stayInTouch": "Stay in touch"
+  },
+  "home": {
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening",
+      "late": "It's late, go to bed",
+      "default": "Hello"
+    },
+    "welcome": "My name is {name} — Welcome to my site.",
+    "quickLinks": "Quick Links",
+    "aboutMe": "About Me"
+  },
+  "about": {
+    "title": "About",
+    "moreAboutMe": "More about me",
+    "tabs": {
+      "career": "Career",
+      "aboutSite": "About This Site"
+    },
+    "siteDescription": "This site is built with Next.js and deployed on Vercel. Content is managed through local JSON files. Radix UI is used for front-end components. Next Themes made light/dark-mode management easy."
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "A collection of my projects and work.",
+    "comingSoon": "Projects coming soon..."
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Page not found",
+    "backHome": "Go to Home"
+  },
+  "contact": {
+    "title": "Contact",
+    "email": "Email",
+    "compose": "Compose",
+    "copy": "Copy",
+    "copied": "Copied to clipboard",
+    "copyFailed": "Copy failed",
+    "bookTime": "Book a time",
+    "bookTimeDesc": "For advice, it's easier to chat live",
+    "book": "Book",
+    "stayInTouch": "Stay in touch",
+    "stayInTouchDesc": "I'm most active on Telegram"
+  },
+  "tooltip": {
+    "press": "Press"
+  }
+}

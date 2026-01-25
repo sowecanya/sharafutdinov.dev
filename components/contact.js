@@ -5,8 +5,10 @@ import * as Dialog from "@radix-ui/react-dialog";
 import util from "../styles/util.module.css";
 import ContactContent from "./contactContent";
 import * as Tooltip from "@radix-ui/react-tooltip";
+import { useTranslation } from "../lib/i18n";
 
 export default function Contact({ svg, label, shortcut }) {
+  const { t } = useTranslation();
   const timeRef = useRef(0);
 
   useEffect(() => {
@@ -55,7 +57,9 @@ export default function Contact({ svg, label, shortcut }) {
                 </Tooltip.Trigger>
 
                 <Tooltip.Content className={util.tooltip}>
-                  <span style={{ marginRight: "4px" }}>Press</span>
+                  <span style={{ marginRight: "4px" }}>
+                    {t("tooltip.press")}
+                  </span>
                   <div className={styles.shortcut}>
                     <span className={styles.shortcutText}>{shortcut}</span>
                   </div>
@@ -72,7 +76,9 @@ export default function Contact({ svg, label, shortcut }) {
           className={styles.content}
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
-          <Dialog.Title className={styles.title}>Contact</Dialog.Title>
+          <Dialog.Title className={styles.title}>
+            {t("contact.title")}
+          </Dialog.Title>
           <ContactContent inModal="true" />
         </Dialog.Content>
       </Dialog.Portal>

@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "home": "Главная",
+    "about": "Обо мне",
+    "projects": "Проекты",
+    "contact": "Контакты",
+    "stayInTouch": "Связаться"
+  },
+  "home": {
+    "greeting": {
+      "morning": "Доброе утро",
+      "afternoon": "Добрый день",
+      "evening": "Добрый вечер",
+      "late": "Уже поздно, пора спать",
+      "default": "Привет"
+    },
+    "welcome": "Меня зовут {name} — Добро пожаловать на мой сайт.",
+    "quickLinks": "Быстрые ссылки",
+    "aboutMe": "Обо мне"
+  },
+  "about": {
+    "title": "Обо мне",
+    "moreAboutMe": "Подробнее обо мне",
+    "tabs": {
+      "career": "Карьера",
+      "aboutSite": "О сайте"
+    },
+    "siteDescription": "Сайт создан на Next.js и размещён на Vercel. Контент хранится в локальных JSON-файлах. Radix UI используется для UI-компонентов. Next Themes упростил управление темами."
+  },
+  "projects": {
+    "title": "Проекты",
+    "description": "Коллекция моих проектов и работ.",
+    "comingSoon": "Проекты скоро появятся..."
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Страница не найдена",
+    "backHome": "На главную"
+  },
+  "contact": {
+    "title": "Контакты",
+    "email": "Email",
+    "compose": "Написать",
+    "copy": "Копировать",
+    "copied": "Скопировано",
+    "copyFailed": "Ошибка копирования",
+    "bookTime": "Забронировать время",
+    "bookTimeDesc": "Для консультации удобнее созвониться",
+    "book": "Забронировать",
+    "stayInTouch": "Связаться",
+    "stayInTouchDesc": "Активнее всего в Telegram"
+  },
+  "tooltip": {
+    "press": "Нажми"
+  }
+}

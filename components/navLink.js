@@ -5,16 +5,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import * as Tooltip from "@radix-ui/react-tooltip";
+import { useTranslation } from "../lib/i18n";
 
 export default function NavLink({ svg, label, href, shortcut, external }) {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const ariaCurrent =
     router.asPath.includes(href) && href !== "/"
       ? "page"
       : router.pathname === href
-      ? "page"
-      : undefined;
+        ? "page"
+        : undefined;
 
   useEffect(() => {
     document.addEventListener("keypress", function (event) {
@@ -74,7 +76,7 @@ export default function NavLink({ svg, label, href, shortcut, external }) {
               </Tooltip.Trigger>
 
               <Tooltip.Content className={util.tooltip}>
-                <span style={{ marginRight: "4px" }}>Press</span>
+                <span style={{ marginRight: "4px" }}>{t("tooltip.press")}</span>
                 <div className={styles.shortcut}>
                   <span className={styles.shortcutText}>{shortcut}</span>
                 </div>

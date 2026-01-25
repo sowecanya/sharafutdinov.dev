@@ -2,10 +2,19 @@
   "items": [
     {
       "id": "1",
-      "title": "Project One",
-      "description": "Description of your first project.",
+      "title": {
+        "en": "Project One",
+        "ru": "Проект Один"
+      },
+      "description": {
+        "en": "Description of your first project.",
+        "ru": "Описание вашего первого проекта."
+      },
       "image": "project-placeholder",
-      "type": "Web · Side Project",
+      "type": {
+        "en": "Web · Side Project",
+        "ru": "Веб · Личный проект"
+      },
       "date": "2024-01-01",
       "url": "",
       "internal": false
