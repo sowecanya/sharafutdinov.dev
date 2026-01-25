@@ -1,9 +1,18 @@
-import styles from ".//projectTile.module.css";
+import styles from "./projectTile.module.css";
 import Image from "next/image";
 import util from "../../styles/util.module.css";
 import { trackProjectClick } from "../../lib/analytics";
 
-export default function ProjectTile({ image, title, content, type, url }) {
+export default function ProjectTile({
+  image,
+  title,
+  content,
+  type,
+  date,
+  stack,
+  stackLabel,
+  url,
+}) {
   const Wrapper = url ? "a" : "div";
   const wrapperProps = url
     ? {
@@ -16,6 +25,10 @@ export default function ProjectTile({ image, title, content, type, url }) {
 
   return (
     <li className={styles.outer}>
+      <div className={styles.dateMarker}>
+        <span className={styles.dateDot} aria-hidden="true" />
+        <span className={styles.dateText}>{date}</span>
+      </div>
       <Wrapper className={styles.container} {...wrapperProps}>
         {image && (
           <div className={styles.imageWrapper}>
@@ -30,7 +43,7 @@ export default function ProjectTile({ image, title, content, type, url }) {
           </div>
         )}
 
-        <div className={styles.stack}>
+        <div className={styles.content}>
           <div className={styles.row}>
             <h3 className={util.tileTitle}>{title}</h3>
             {url && <span className={styles.externalIcon}>↗</span>}
@@ -38,6 +51,19 @@ export default function ProjectTile({ image, title, content, type, url }) {
 
           <p className={util.tileContent}>{content}</p>
           <p className={styles.type}>{type}</p>
+
+          {stack && stack.length > 0 && (
+            <div className={styles.stackSection}>
+              <span className={styles.stackLabel}>{stackLabel}</span>
+              <div className={styles.stackList}>
+                {stack.map((tech) => (
+                  <span key={tech} className={styles.stackChip}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </Wrapper>
     </li>

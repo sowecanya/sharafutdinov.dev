@@ -34,7 +34,6 @@ export default function Projects() {
       groups[year].push(project);
     });
 
-    // Sort years descending, sort projects within year by date descending
     const sortedYears = Object.keys(groups)
       .map(Number)
       .sort((a, b) => b - a);
@@ -63,24 +62,37 @@ export default function Projects() {
           <h1 className={util.header}>{t("projects.title")}</h1>
           <p className={util.description}>{t("projects.description")}</p>
 
-          {projectsByYear.map(({ year, projects }) => (
-            <section key={year} className={styles.yearSection}>
-              <h2 className={styles.yearTitle}>{year}</h2>
-              <ul className={styles.projectList}>
-                {projects.map((project) => (
-                  <ProjectTile
-                    key={project.id}
-                    image={project.image}
-                    title={localize(project.title)}
-                    content={localize(project.description)}
-                    type={localize(project.type)}
-                    url={project.url}
-                    internal={project.internal ? "true" : undefined}
-                  />
-                ))}
-              </ul>
-            </section>
-          ))}
+          <div className={styles.timeline}>
+            <div className={styles.timelineLine} aria-hidden="true" />
+
+            {projectsByYear.map(({ year, projects }) => (
+              <section key={year} className={styles.yearSection}>
+                <h2 className={styles.yearTitle}>{year}</h2>
+                <ul className={styles.projectList}>
+                  {projects.map((project) => {
+                    const date = new Date(project.date);
+                    const month = date.getMonth() + 1;
+                    const monthName = t(`months.${month}`);
+
+                    return (
+                      <ProjectTile
+                        key={project.id}
+                        image={project.image}
+                        title={localize(project.title)}
+                        content={localize(project.description)}
+                        type={localize(project.type)}
+                        date={`${monthName} ${year}`}
+                        stack={project.stack}
+                        stackLabel={t("projects.stack")}
+                        url={project.url}
+                        internal={project.internal ? "true" : undefined}
+                      />
+                    );
+                  })}
+                </ul>
+              </section>
+            ))}
+          </div>
 
           {projectsData.items.length === 0 && (
             <p
