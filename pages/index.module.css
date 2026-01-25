@@ -16,14 +16,14 @@
    HERO SECTION
    ============================================ */
 .heroSection {
-  margin-top: 8rem;
+  margin-top: 0;
   margin-bottom: 6rem;
   animation: fadeUp 0.6s ease-out;
   text-align: center;
 }
 @media (max-width: 700px) {
   .heroSection {
-    margin-top: 5rem;
+    margin-top: 0;
     margin-bottom: 4rem;
   }
 }
