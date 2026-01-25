@@ -80,7 +80,7 @@ export default function About() {
           {localize(profile.name)} · {t("about.title")}
         </title>
         <meta name="description" content={localize(profile.bio)} />
-        <link rel="icon" href="/favicon.gif" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <meta property="og:image" content="/og/index.png" />
       </Head>
       <main className={util.page} id="aboutPage">

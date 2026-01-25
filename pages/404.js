@@ -12,7 +12,7 @@ export default function Custom404() {
       <Head>
         <title>{t("notFound.title")}</title>
         <meta name="description" content={t("notFound.message")} />
-        <link rel="icon" href="/favicon.gif" type="image/gif" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <meta property="og:image" content="/og/index.png" />
       </Head>
       <main className={util.page} id="recentsPage">
