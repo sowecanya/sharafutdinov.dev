@@ -25,11 +25,8 @@ export default function ProjectTile({
 
   return (
     <li className={styles.outer}>
-      <div className={styles.dateMarker}>
-        <span className={styles.dateDot} aria-hidden="true" />
-        <span className={styles.dateText}>{date}</span>
-      </div>
       <Wrapper className={styles.container} {...wrapperProps}>
+        <span className={styles.dateBadge}>{date}</span>
         {image && (
           <div className={styles.imageWrapper}>
             <Image

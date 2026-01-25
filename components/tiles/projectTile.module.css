@@ -84,39 +84,29 @@
   margin-top: 0;
 }
 
-/* Date marker on timeline */
-.dateMarker {
+/* Date badge inside card */
+.dateBadge {
   position: absolute;
-  left: -2rem;
-  top: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.dateDot {
-  width: 10px;
-  height: 10px;
-  background-color: var(--gray6);
-  border-radius: 50%;
-  margin-left: -3px;
-  transition: background-color 0.25s ease;
-}
-
-.outer:hover .dateDot {
-  background-color: var(--blue9);
-}
-
-.dateText {
-  position: absolute;
-  left: 1rem;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.5rem;
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--gray9);
-  white-space: nowrap;
-  text-transform: uppercase;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, monospace;
+  color: var(--gray11);
+  background-color: var(--gray3);
+  border: 1px solid var(--gray5);
+  border-radius: 4px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  z-index: 1;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.container:hover .dateBadge {
+  background-color: var(--gray4);
+  border-color: var(--gray6);
 }
 
 /* Content section */
@@ -169,19 +159,11 @@
 }
 
 @media (max-width: 700px) {
-  .dateMarker {
-    left: -1.5rem;
-  }
-
-  .dateDot {
-    width: 8px;
-    height: 8px;
-    margin-left: -2.5px;
-  }
-
-  .dateText {
+  .dateBadge {
     font-size: 10px;
-    left: 0.75rem;
+    padding: 0.2rem 0.4rem;
+    top: 0.75rem;
+    right: 0.75rem;
   }
 
   .stackChip {
@@ -192,7 +174,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .container,
-  .dateDot,
+  .dateBadge,
   .stackChip,
   .externalIcon {
     transition: none;

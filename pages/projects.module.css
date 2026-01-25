@@ -66,6 +66,44 @@
   list-style: none;
 }
 
+/* Timeline markers (start/end) */
+.timelineMarker {
+  position: relative;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background-color: var(--gray2);
+  border: 1px solid var(--gray4);
+  border-radius: 8px;
+  color: var(--gray11);
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+.timelineMarker::before {
+  content: "";
+  position: absolute;
+  left: -2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.timelineMarkerStart {
+  margin-top: 0;
+}
+
+.timelineMarkerStart::before {
+  background: linear-gradient(135deg, var(--blue9), var(--blue10));
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.timelineMarkerEnd::before {
+  background-color: var(--gray5);
+}
+
 @media (max-width: 700px) {
   .timeline {
     padding-left: 1.5rem;
@@ -95,6 +133,18 @@
     left: 0;
     width: 4px;
     height: 4px;
+  }
+
+  .timelineMarker {
+    padding: 0.75rem 1rem;
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  .timelineMarker::before {
+    left: -2rem;
+    width: 10px;
+    height: 10px;
   }
 }
 
