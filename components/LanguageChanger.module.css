@@ -3,9 +3,9 @@
   display: flex;
   position: relative;
   background-color: var(--tabbg);
-  padding: 2.5px;
+  padding: 3px;
   border-radius: 8px;
-  margin-top: 0.5rem;
+  width: 100%;
 }
 
 .tabs * {
@@ -22,8 +22,8 @@
   align-items: center;
   justify-content: center;
   height: 1.75rem;
-  width: 74.07px;
-  font-size: 0.825rem;
+  flex: 1;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--menuLabel);
   border-radius: 6px;
@@ -37,26 +37,20 @@
 
 /* Glider positioning using :nth-of-type to work with any id suffix */
 .input:nth-of-type(1):checked ~ .glider {
-  transform: translateX(0);
+  left: 3px;
 }
 
 .input:nth-of-type(2):checked ~ .glider {
-  transform: translateX(100%);
+  left: calc(50% + 0px);
 }
 
 .glider {
   position: absolute;
   display: flex;
   height: 1.75rem;
-  width: 74.07px;
+  width: calc(50% - 3px);
   background-color: var(--highlight);
   z-index: 1;
   border-radius: 6px;
   transition: 0.2s ease-in-out;
-}
-
-@media (max-width: 700px) {
-  .tabs {
-    margin-top: 0.25rem;
-  }
 }
