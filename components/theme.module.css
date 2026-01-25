@@ -33,8 +33,8 @@
   align-items: center;
   justify-content: center;
   height: 1.75rem;
-  width: 74.07px;
-  font-size: 0.825rem;
+  width: 54px;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--menuLabel);
   border-radius: 6px;
@@ -65,9 +65,8 @@
   position: absolute;
   display: flex;
   height: 1.75rem;
-  width: 74.07px;
+  width: 54px;
   background-color: var(--highlight);
-
   z-index: 1;
   border-radius: 6px;
   transition: 0.2s ease-in-out;
