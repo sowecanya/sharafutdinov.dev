@@ -50,9 +50,7 @@ export default function ContactContent() {
                   fill="#909090"
                 />
               </svg>
-              <span className={util.iconButtonText}>
-                {t("contact.compose")}
-              </span>
+              <span className={util.iconButtonText}>{t("contact.email")}</span>
             </a>
             <button onClick={updateClipboard} className={util.button}>
               <svg
@@ -77,7 +75,6 @@ export default function ContactContent() {
       <div className={styles.row}>
         <div className={styles.stack}>
           <p className={styles.mainText}>{t("contact.stayInTouch")}</p>
-          <p className={styles.subText}>{t("contact.stayInTouchDesc")}</p>
         </div>
         <div className={styles.flexRow}>
           {profile.social?.telegram && (
@@ -100,26 +97,6 @@ export default function ContactContent() {
               <span className={util.iconButtonText}>Telegram</span>
             </a>
           )}
-          {profile.social?.github && (
-            <a
-              className={styles.textButton}
-              href={profile.social.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View GitHub profile"
-              onClick={() => trackSocialClick("github")}
-            >
-              <Image
-                className={styles.icon}
-                priority
-                src={"/icons/github.svg"}
-                height={18}
-                width={18}
-                alt=""
-              />
-              <span className={util.iconButtonText}>GitHub</span>
-            </a>
-          )}
           {profile.social?.linkedin && (
             <a
               className={styles.textButton}
@@ -140,26 +117,46 @@ export default function ContactContent() {
               <span className={util.iconButtonText}>LinkedIn</span>
             </a>
           )}
-          {profile.social?.twitter && (
+        </div>
+      </div>
+      <div className={styles.row}>
+        <div className={styles.stack}>
+          <p className={styles.mainText}>{t("contact.elsewhere")}</p>
+        </div>
+        <div className={styles.flexRow}>
+          {profile.social?.github && (
             <a
               className={styles.textButton}
-              href={profile.social.twitter}
+              href={profile.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="View Twitter profile"
-              onClick={() => trackSocialClick("twitter")}
+              aria-label="View GitHub profile"
+              onClick={() => trackSocialClick("github")}
             >
               <Image
                 className={styles.icon}
                 priority
-                src={"/icons/twitter.svg"}
+                src={"/icons/github.svg"}
                 height={18}
                 width={18}
                 alt=""
               />
-              <span className={util.iconButtonText}>Twitter</span>
+              <span className={util.iconButtonText}>GitHub</span>
             </a>
           )}
+          {profile.profiles?.map((p) => (
+            <a
+              key={p.id}
+              className={styles.textButton}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View ${p.name} profile`}
+              onClick={() => trackSocialClick(p.id)}
+            >
+              <span className={util.iconButtonText}>{p.name}</span>
+            </a>
+          ))}
         </div>
       </div>
     </>

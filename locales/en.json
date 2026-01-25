@@ -14,13 +14,15 @@
     "description": "Change theme and language preferences"
   },
   "common": {
-    "close": "Close"
+    "close": "Close",
+    "opensNewTab": "opens in new tab"
   },
   "home": {
     "valueProp": "Building productivity tools for AEC industry",
     "tags": "Revit API • Family Development • AI-assisted workflows",
     "viewProjects": "View Projects",
     "getInTouch": "Get in Touch",
+    "skills": "Skills",
     "recentProjects": "Recent Projects",
     "viewAllProjects": "View all projects",
     "latestWork": "Latest Work",
@@ -85,7 +87,8 @@
     "bookTimeDesc": "For advice, it's easier to chat live",
     "book": "Book",
     "stayInTouch": "Stay in touch",
-    "stayInTouchDesc": "I'm most active on Telegram"
+    "stayInTouchDesc": "I'm most active on Telegram",
+    "elsewhere": "Elsewhere"
   },
   "skills": {
     "title": "Skills",
