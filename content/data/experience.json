@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "company": "Your Company",
+      "role": "Software Engineer",
+      "date": "2023 - Present",
+      "description": "Building great products.",
+      "url": ""
+    }
+  ]
+}
