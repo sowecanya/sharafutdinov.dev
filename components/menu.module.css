@@ -27,6 +27,12 @@
   flex-shrink: 1;
   margin: -6px;
   padding: 6px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.upper::-webkit-scrollbar {
+  display: none;
 }
 
 .settingsDesktop {
@@ -62,6 +68,8 @@
     margin: 0px;
     background-color: var(--appbg);
     z-index: 9;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   .container::-webkit-scrollbar {
