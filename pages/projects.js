@@ -1,6 +1,7 @@
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import util from "../styles/util.module.css";
+import styles from "./projects.module.css";
 import ProjectTile from "../components/tiles/projectTile";
 import profile from "../content/data/profile.json";
 import projectsData from "../content/data/projects.json";
@@ -22,6 +23,30 @@ export default function Projects() {
     return () => thisPage.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Group projects by year, sorted descending
+  const projectsByYear = useMemo(() => {
+    const groups = {};
+    projectsData.items.forEach((project) => {
+      const year = new Date(project.date).getFullYear();
+      if (!groups[year]) {
+        groups[year] = [];
+      }
+      groups[year].push(project);
+    });
+
+    // Sort years descending, sort projects within year by date descending
+    const sortedYears = Object.keys(groups)
+      .map(Number)
+      .sort((a, b) => b - a);
+
+    return sortedYears.map((year) => ({
+      year,
+      projects: groups[year].sort(
+        (a, b) => new Date(b.date) - new Date(a.date),
+      ),
+    }));
+  }, []);
+
   return (
     <>
       <Head>
@@ -37,20 +62,26 @@ export default function Projects() {
         <div className={util.pageColumn}>
           <h1 className={util.header}>{t("projects.title")}</h1>
           <p className={util.description}>{t("projects.description")}</p>
-          <ul className={util.list}>
-            {projectsData.items.map((project) => (
-              <ProjectTile
-                key={project.id}
-                image={project.image}
-                title={localize(project.title)}
-                content={localize(project.description)}
-                type={localize(project.type)}
-                date={project.date}
-                url={project.url}
-                internal={project.internal ? "true" : undefined}
-              />
-            ))}
-          </ul>
+
+          {projectsByYear.map(({ year, projects }) => (
+            <section key={year} className={styles.yearSection}>
+              <h2 className={styles.yearTitle}>{year}</h2>
+              <ul className={styles.projectList}>
+                {projects.map((project) => (
+                  <ProjectTile
+                    key={project.id}
+                    image={project.image}
+                    title={localize(project.title)}
+                    content={localize(project.description)}
+                    type={localize(project.type)}
+                    url={project.url}
+                    internal={project.internal ? "true" : undefined}
+                  />
+                ))}
+              </ul>
+            </section>
+          ))}
+
           {projectsData.items.length === 0 && (
             <p
               className={util.description}

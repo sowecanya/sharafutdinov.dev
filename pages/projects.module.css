@@ -1,0 +1,32 @@
+.yearSection {
+  margin-top: 2rem;
+}
+
+.yearSection:first-of-type {
+  margin-top: 1.5rem;
+}
+
+.yearTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray12);
+  margin-bottom: 1rem;
+  padding-left: 0.125rem;
+  transition: color 0.25s ease;
+}
+
+.projectList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (max-width: 700px) {
+  .yearSection {
+    margin-top: 2rem;
+  }
+
+  .yearTitle {
+    font-size: 1.25rem;
+  }
+}
