@@ -37,16 +37,18 @@
           "endDate": "2025-09-01",
           "responsibilities": {
             "en": [
-              "Led complex engineering solutions and systems integration",
-              "Coordinated project team's BIM model",
-              "Developed internal Revit standards and templates",
-              "Vendor coordination and equipment specifications"
+              "Led development of complex engineering solutions, integrated automation systems with adjacent MEP systems",
+              "Coordinated project team's BIM model: maintained structure, ensured cross-discipline consistency",
+              "Developed internal modeling standards and templates",
+              "Managed project through expert review process, prepared responses to review comments",
+              "Coordinated with equipment vendors, prepared specifications"
             ],
             "ru": [
-              "Руководство сложными инженерными решениями и интеграцией систем",
-              "Координация BIM-модели проектной группы",
-              "Разработка внутренних стандартов Revit",
-              "Координация с поставщиками и спецификации оборудования"
+              "Руководство разработкой сложных инженерных решений, интеграция систем автоматизации со смежными инженерными системами",
+              "Координация BIM-модели проектной группы: контроль структуры, обеспечение согласованности между разделами",
+              "Разработка внутренних стандартов и шаблонов моделирования",
+              "Сопровождение проекта при прохождении экспертизы, подготовка ответов на замечания",
+              "Взаимодействие с поставщиками оборудования, подготовка спецификаций"
             ]
           }
         },
@@ -59,14 +61,14 @@
           "endDate": "2025-06-01",
           "responsibilities": {
             "en": [
-              "Advanced Revit modeling and configuration",
-              "Mentored colleagues on BIM workflows",
-              "Cross-discipline coordination and clash detection"
+              "Independent management of design and construction documentation tailored to project requirements",
+              "BIM model population and verification, configuration of working views, annotation templates, and visibility filters",
+              "Mentored junior specialists in Revit workflows, consulted colleagues on BIM processes"
             ],
             "ru": [
-              "Продвинутое моделирование в Revit",
-              "Наставничество коллег по BIM-процессам",
-              "Межраздельная координация и поиск коллизий"
+              "Самостоятельное ведение проектной и рабочей документации с учётом требований конкретного проекта",
+              "Наполнение и верификация BIM-модели, настройка рабочих видов, шаблонов оформления и фильтров видимости",
+              "Наставничество младших специалистов по работе в Revit, консультирование коллег по BIM-процессам"
             ]
           }
         },
@@ -79,14 +81,16 @@
           "endDate": "2024-11-01",
           "responsibilities": {
             "en": [
-              "Design documentation for Automation and Dispatching",
-              "Projects: Moscow Metro infrastructure, civil buildings",
-              "Initial BIM environment and equipment placement"
+              "Developed design and construction documentation for Automation and Dispatching section on metro and residential projects as part of design team",
+              "Learned and applied BIM technologies",
+              "Collected and analyzed data from equipment manufacturers",
+              "Coordinated with adjacent disciplines: issued and received assignments, resolved clashes"
             ],
             "ru": [
-              "Рабочая документация по автоматизации и диспетчеризации",
-              "Проекты: объекты Московского метро, гражданские здания",
-              "Начальная работа в BIM-среде и размещение оборудования"
+              "Разработка проектной и рабочей документации по разделу «Автоматизация и диспетчеризация» на объектах метро и жилья в составе проектной группы",
+              "Изучение и применение BIM-технологий",
+              "Сбор и анализ данных от производителей",
+              "Взаимодействие со смежными разделами: получение и выдача заданий, устранение коллизий"
             ]
           }
         }
