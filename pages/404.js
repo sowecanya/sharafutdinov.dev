@@ -1,20 +1,20 @@
 // pages/404.js
-import Head from "next/head";
 import util from "../styles/util.module.css";
 import Link from "next/link";
 import { useTranslation } from "../lib/i18n";
+import SEO from "../components/SEO";
 
 export default function Custom404() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   return (
     <>
-      <Head>
-        <title>{t("notFound.title")}</title>
-        <meta name="description" content={t("notFound.message")} />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <meta property="og:image" content="/og/index.png" />
-      </Head>
+      <SEO
+        title="404 — Page Not Found"
+        description={t("notFound.message")}
+        url="/404"
+        locale={locale}
+      />
       <main className={util.page} id="recentsPage">
         <div className={util.center}>
           <h1 className={util.header} style={{ marginBottom: "0.25rem" }}>

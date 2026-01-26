@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
 import ExpTile from "../components/tiles/expTile";
@@ -9,6 +8,7 @@ import educationData from "../content/data/education.json";
 import storyData from "../content/data/story.json";
 import { useTranslation } from "../lib/i18n";
 import styles from "../styles/story.module.css";
+import SEO from "../components/SEO";
 
 // Format date range and calculate duration
 function formatDateRange(startDate, endDate, locale) {
@@ -105,14 +105,16 @@ export default function About() {
 
   return (
     <>
-      <Head>
-        <title>
-          {localize(profile.name)} · {t("about.title")}
-        </title>
-        <meta name="description" content={localize(profile.bio)} />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <meta property="og:image" content="/og/index.png" />
-      </Head>
+      <SEO
+        title={`${t("about.title")} — ${localize(profile.name)}`}
+        description={
+          locale === "ru"
+            ? "Карьера, образование и история. BIM-координатор в R1, .NET разработчик, AI энтузиаст."
+            : "Career, education and story. BIM coordinator at R1, .NET developer, AI enthusiast."
+        }
+        url="/about"
+        locale={locale}
+      />
       <main className={util.page} id="aboutPage">
         <div className={util.pageColumn}>
           <h1 className={util.header}>{t("about.title")}</h1>

@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React, { useEffect, useMemo } from "react";
 import util from "../styles/util.module.css";
 import styles from "./projects.module.css";
@@ -6,9 +5,10 @@ import ProjectTile from "../components/tiles/projectTile";
 import profile from "../content/data/profile.json";
 import projectsData from "../content/data/projects.json";
 import { useTranslation } from "../lib/i18n";
+import SEO from "../components/SEO";
 
 export default function Projects() {
-  const { t, localize } = useTranslation();
+  const { t, localize, locale } = useTranslation();
 
   useEffect(() => {
     let thisPage = document.querySelector("#projectsPage");
@@ -48,14 +48,16 @@ export default function Projects() {
 
   return (
     <>
-      <Head>
-        <title>
-          {localize(profile.name)} · {t("projects.title")}
-        </title>
-        <meta name="description" content={t("projects.description")} />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <meta property="og:image" content="/og/index.png" />
-      </Head>
+      <SEO
+        title={`${t("projects.title")} — ${localize(profile.name)}`}
+        description={
+          locale === "ru"
+            ? "Мои проекты: Revit плагины, AI системы, Telegram боты. Open source и коммерческие решения."
+            : "My projects: Revit plugins, AI systems, Telegram bots. Open source and commercial solutions."
+        }
+        url="/projects"
+        locale={locale}
+      />
 
       <main id="projectsPage" className={util.page}>
         <div className={util.pageColumn}>

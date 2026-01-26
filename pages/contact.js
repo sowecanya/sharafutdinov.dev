@@ -1,12 +1,12 @@
-import Head from "next/head";
 import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
 import ContactContent from "../components/contactContent";
 import profile from "../content/data/profile.json";
 import { useTranslation } from "../lib/i18n";
+import SEO from "../components/SEO";
 
 export default function Contact() {
-  const { t, localize } = useTranslation();
+  const { t, localize, locale } = useTranslation();
 
   useEffect(() => {
     let thisPage = document.querySelector("#contactPage");
@@ -23,14 +23,16 @@ export default function Contact() {
 
   return (
     <>
-      <Head>
-        <title>
-          {localize(profile.name)} · {t("contact.title")}
-        </title>
-        <meta name="description" content={t("contact.pageDescription")} />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <meta property="og:image" content="/og/index.png" />
-      </Head>
+      <SEO
+        title={`${t("contact.title")} — ${localize(profile.name)}`}
+        description={
+          locale === "ru"
+            ? "Связаться со мной: email, Telegram, LinkedIn. Открыт к проектам и коллаборациям."
+            : "Contact me: email, Telegram, LinkedIn. Open to projects and collaborations."
+        }
+        url="/contact"
+        locale={locale}
+      />
       <main className={util.page} id="contactPage">
         <div className={util.pageColumn}>
           <h1 className={util.header}>{t("contact.title")}</h1>
