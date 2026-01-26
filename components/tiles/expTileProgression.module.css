@@ -26,19 +26,9 @@
 
 .responsibilities {
   margin: 0;
-  padding-left: 1.25rem;
-  list-style: disc;
-}
-
-.responsibilities li {
   font-size: var(--font-l);
   color: var(--gray11);
   line-height: 1.5;
-  margin-bottom: 0.25rem;
-}
-
-.responsibilities li:last-child {
-  margin-bottom: 0;
 }
 
 /* Mobile */
@@ -47,7 +37,7 @@
     font-size: var(--font-m);
   }
 
-  .responsibilities li {
+  .responsibilities {
     font-size: var(--font-m);
   }
 }

@@ -155,11 +155,9 @@ export default function ExpTileProgression({ item }) {
                 <p className={styles.levelDate}>
                   {levelStart} – {levelEnd} · {levelDuration}
                 </p>
-                <ul className={styles.responsibilities}>
-                  {localize(level.responsibilities).map((resp, i) => (
-                    <li key={i}>{resp}</li>
-                  ))}
-                </ul>
+                <p className={styles.responsibilities}>
+                  {localize(level.responsibilities).join(". ")}.
+                </p>
               </div>
             );
           })}
