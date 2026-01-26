@@ -138,25 +138,6 @@ npm run start
 
 ---
 
-## Screenshots
-
-Generate screenshots automatically:
-
-```bash
-# Terminal 1: Start dev server
-npm run dev
-
-# Terminal 2: Generate screenshots
-npm run screenshots
-```
-
-This creates 12 screenshots in `public/screenshots/`:
-- Desktop views (1440x900): home, about, projects, skills, contact
-- Mobile views (390x844): home, about, projects, skills, contact
-- Theme comparison: light-mode, dark-mode
-
----
-
 ## Credits
 
 Based on [sj.land](https://github.com/sjzhan9/sj-land) by Steven Zhang — thank you for the beautiful foundation!
