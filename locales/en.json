@@ -53,7 +53,12 @@
     "title": "Projects",
     "description": "A collection of my projects and work.",
     "comingSoon": "Projects coming soon...",
-    "stack": "Stack"
+    "stack": "Stack",
+    "status": {
+      "active": "Active",
+      "completed": "Completed",
+      "paused": "Paused"
+    }
   },
   "months": {
     "1": "Jan",
