@@ -147,7 +147,11 @@ export default function ExpTileProgression({ item }) {
               locale,
             );
             const levelStart = formatShortDate(level.startDate, locale);
-            const levelEnd = formatShortDate(level.endDate, locale);
+            const levelEnd = level.endDate
+              ? formatShortDate(level.endDate, locale)
+              : locale === "ru"
+                ? "настоящее время"
+                : "Present";
 
             return (
               <div key={index} className={styles.level}>

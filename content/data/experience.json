@@ -6,16 +6,32 @@
         "en": "R1",
         "ru": "R1"
       },
-      "role": {
-        "en": "BIM Coordinator",
-        "ru": "BIM-координатор"
-      },
       "startDate": "2025-11-01",
       "endDate": null,
-      "description": {
-        "en": "Development of Revit engineering families (parametric, lookup tables). Library management and optimization. Consulting and supporting design engineers in Revit workflows. BIM coordination and quality control.",
-        "ru": "Разработка инженерных семейств Revit (параметрические, таблицы подстановки). Управление и оптимизация библиотек. Консультирование проектировщиков по работе в Revit. BIM-координация и контроль качества."
-      },
+      "progression": [
+        {
+          "role": {
+            "en": "BIM Coordinator",
+            "ru": "BIM-координатор"
+          },
+          "startDate": "2025-11-01",
+          "endDate": null,
+          "responsibilities": {
+            "en": [
+              "Development of Revit engineering families of varying complexity, including parametric families and families with lookup tables",
+              "Population, updating, and optimization of family libraries",
+              "Consulting and supporting design engineers in Revit workflows",
+              "BIM coordination and quality control"
+            ],
+            "ru": [
+              "Разработка инженерных семейств Revit различной сложности, включая параметрические семейства и семейства с таблицами подстановки",
+              "Наполнение, актуализация и оптимизация библиотек семейств",
+              "Консультирование и поддержка проектировщиков по работе в Revit",
+              "BIM-координация и контроль качества"
+            ]
+          }
+        }
+      ],
       "stack": ["Revit", "Revit API", "C#", "Navisworks"],
       "url": ""
     },
