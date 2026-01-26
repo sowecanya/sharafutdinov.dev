@@ -17,7 +17,7 @@
       },
       "date": "2026-01-01",
       "stack": ["Python", "Claude API", "LangGraph", "FastAPI", "Exa", "Redis"],
-      "url": "",
+      "url": "https://github.com/sowecanya/startup-agents",
       "internal": false,
       "status": "active"
     },

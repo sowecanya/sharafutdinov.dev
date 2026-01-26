@@ -45,6 +45,7 @@ export default function ProjectTile({
         <div className={styles.content}>
           <div className={styles.row}>
             <h3 className={util.tileTitle}>{title}</h3>
+            {url && <span className={styles.externalIcon}>↗</span>}
             {status && (
               <span className={styles.statusWrapper}>
                 <span
@@ -59,7 +60,6 @@ export default function ProjectTile({
                 <span className={styles.statusLabel}>{statusLabel}</span>
               </span>
             )}
-            {url && <span className={styles.externalIcon}>↗</span>}
           </div>
 
           <p className={util.tileContent}>{content}</p>
