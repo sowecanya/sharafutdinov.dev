@@ -47,16 +47,16 @@ export default function ProjectTile({
             <h3 className={util.tileTitle}>{title}</h3>
             {status && (
               <span
-                className={`${styles.statusBadge} ${
+                className={`${styles.statusDot} ${
                   status === "active"
                     ? styles.statusActive
                     : status === "paused"
                       ? styles.statusPaused
                       : styles.statusCompleted
                 }`}
-              >
-                {statusLabel}
-              </span>
+                title={statusLabel}
+                aria-label={statusLabel}
+              />
             )}
             {url && <span className={styles.externalIcon}>↗</span>}
           </div>
