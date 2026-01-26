@@ -1,6 +1,27 @@
 {
   "items": [
     {
+      "id": "startup-agents",
+      "title": {
+        "en": "Startup Agents",
+        "ru": "Startup Agents"
+      },
+      "description": {
+        "en": "Multi-agent AI system for startup validation. Analyzes market, competitors, unit economics, team, and tech stack. Produces structured due diligence reports.",
+        "ru": "Мульти-агентная AI-система для валидации стартапов. Анализирует рынок, конкурентов, unit-экономику, команду и техстек. Формирует структурированные отчёты due diligence."
+      },
+      "image": "",
+      "type": {
+        "en": "AI · Side Project",
+        "ru": "AI · Личный проект"
+      },
+      "date": "2026-01-01",
+      "stack": ["Python", "Claude API", "LangGraph", "FastAPI", "Exa", "Redis"],
+      "url": "",
+      "internal": false,
+      "status": "active"
+    },
+    {
       "id": "portfolio",
       "title": {
         "en": "sharafutdinov.dev",
@@ -26,7 +47,8 @@
         "Vercel"
       ],
       "url": "https://github.com/sowecanya/sharafutdinov.dev",
-      "internal": false
+      "internal": false,
+      "status": "active"
     },
     {
       "id": "awardybot",
@@ -53,7 +75,8 @@
         "Docker"
       ],
       "url": "",
-      "internal": false
+      "internal": false,
+      "status": "active"
     },
     {
       "id": "dstools",
@@ -81,7 +104,8 @@
         "Claude Code"
       ],
       "url": "",
-      "internal": false
+      "internal": false,
+      "status": "paused"
     },
     {
       "id": "diploma-mobile",
@@ -101,7 +125,8 @@
       "date": "2023-05-01",
       "stack": ["Kotlin", "Android SDK", "SQLite", "Material Design", "MVVM"],
       "url": "",
-      "internal": false
+      "internal": false,
+      "status": "completed"
     },
     {
       "id": "hotel-bot",
@@ -127,7 +152,8 @@
         "Requests"
       ],
       "url": "",
-      "internal": false
+      "internal": false,
+      "status": "completed"
     },
     {
       "id": "doodle-clone",
@@ -147,7 +173,8 @@
       "date": "2018-03-01",
       "stack": ["C#", "Unity", "Unity Physics", "Procedural Generation"],
       "url": "",
-      "internal": false
+      "internal": false,
+      "status": "completed"
     }
   ]
 }

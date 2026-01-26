@@ -12,6 +12,8 @@ export default function ProjectTile({
   stack,
   stackLabel,
   url,
+  status,
+  statusLabel,
 }) {
   const Wrapper = url ? "a" : "div";
   const wrapperProps = url
@@ -43,6 +45,19 @@ export default function ProjectTile({
         <div className={styles.content}>
           <div className={styles.row}>
             <h3 className={util.tileTitle}>{title}</h3>
+            {status && (
+              <span
+                className={`${styles.statusBadge} ${
+                  status === "active"
+                    ? styles.statusActive
+                    : status === "paused"
+                      ? styles.statusPaused
+                      : styles.statusCompleted
+                }`}
+              >
+                {statusLabel}
+              </span>
+            )}
             {url && <span className={styles.externalIcon}>↗</span>}
           </div>
 

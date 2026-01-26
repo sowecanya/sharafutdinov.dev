@@ -86,6 +86,12 @@ export default function Projects() {
                         stackLabel={t("projects.stack")}
                         url={project.url}
                         internal={project.internal ? "true" : undefined}
+                        status={project.status}
+                        statusLabel={
+                          project.status
+                            ? t(`projects.status.${project.status}`)
+                            : undefined
+                        }
                       />
                     );
                   })}
