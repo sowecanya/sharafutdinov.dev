@@ -9,7 +9,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "screenshots": "node scripts/screenshots.js"
+    "screenshots": "node scripts/screenshots.js",
+    "analyze": "cross-env ANALYZE=true next build",
+    "vercel:pull": "vercel env pull .env.local",
+    "vercel:dev": "vercel dev",
+    "vercel:preview": "vercel",
+    "vercel:prod": "vercel --prod",
+    "vercel:logs": "vercel logs"
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",

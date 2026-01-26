@@ -6,6 +6,7 @@ import Menu from "../components/menu";
 import { Toaster } from "react-hot-toast";
 import React from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { LanguageProvider } from "../lib/i18n";
 import { personSchema, websiteSchema } from "../components/SEO";
 
@@ -39,6 +40,7 @@ function MyApp({ Component, pageProps }) {
         <Menu />
         <Component {...pageProps} />
         <Analytics />
+        <SpeedInsights />
       </ThemeProvider>
     </LanguageProvider>
   );
