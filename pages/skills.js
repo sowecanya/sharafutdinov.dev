@@ -1,13 +1,13 @@
-import Head from "next/head";
 import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
 import SkillCategory from "../components/tiles/skillCategory";
 import profile from "../content/data/profile.json";
 import skillsData from "../content/data/skills.json";
 import { useTranslation } from "../lib/i18n";
+import SEO from "../components/SEO";
 
 export default function Skills() {
-  const { t, localize } = useTranslation();
+  const { t, localize, locale } = useTranslation();
 
   useEffect(() => {
     let thisPage = document.querySelector("#skillsPage");
@@ -24,14 +24,16 @@ export default function Skills() {
 
   return (
     <>
-      <Head>
-        <title>
-          {localize(profile.name)} · {t("skills.title")}
-        </title>
-        <meta name="description" content={t("skills.description")} />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <meta property="og:image" content="/og/index.png" />
-      </Head>
+      <SEO
+        title={`${t("skills.title")} — ${localize(profile.name)}`}
+        description={
+          locale === "ru"
+            ? "Технологии и инструменты: C#, Python, Revit API, Claude Code, Next.js."
+            : "Technologies and tools: C#, Python, Revit API, Claude Code, Next.js."
+        }
+        url="/skills"
+        locale={locale}
+      />
 
       <main id="skillsPage" className={util.page}>
         <div className={util.pageColumn}>

@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
@@ -7,6 +6,7 @@ import styles from "../pages/index.module.css";
 import profile from "../content/data/profile.json";
 import projectsData from "../content/data/projects.json";
 import { useTranslation } from "../lib/i18n";
+import SEO from "../components/SEO";
 
 // Typewriter effect component
 const containerVariants = {
@@ -81,14 +81,16 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>
-          {localize(profile.name)} · {t("nav.home")}
-        </title>
-        <meta name="description" content={localize(profile.description)} />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <meta property="og:image" content="/og/index.png" />
-      </Head>
+      <SEO
+        title={`${localize(profile.name)} — BIM, ${locale === "ru" ? "Разработка" : "Development"}, AI`}
+        description={
+          locale === "ru"
+            ? "BIM-координатор и разработчик. Автоматизация Revit, .NET плагины, AI инструменты. Портфолио проектов."
+            : "BIM coordinator and developer. Revit automation, .NET plugins, AI tools. Project portfolio."
+        }
+        url="/"
+        locale={locale}
+      />
       <main className={util.page} id="recentsPage">
         <div className={styles.homeColumn}>
           {/* HERO SECTION */}
