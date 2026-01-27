@@ -7,7 +7,7 @@ import { Toaster } from "react-hot-toast";
 import React from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { LanguageProvider } from "../lib/i18n";
+import { LanguageProvider, getDefaultLocale } from "../lib/i18n";
 import { personSchema, websiteSchema } from "../components/SEO";
 
 // Helper to parse cookies from string
@@ -19,6 +19,27 @@ function parseCookies(cookieString) {
     if (name && value) cookies[name] = value;
   });
   return cookies;
+}
+
+// Detect locale with priority: Cookie > Accept-Language > IP Country > Default
+function detectLocale(req) {
+  if (!req) return "en";
+
+  // 1. Cookie (user's explicit choice) - HIGHEST PRIORITY
+  const cookies = parseCookies(req.headers?.cookie || "");
+  if (cookies.locale === "ru" || cookies.locale === "en") {
+    return cookies.locale;
+  }
+
+  // 2. Accept-Language (browser preference) - BETTER than IP
+  const acceptLang = req.headers?.["accept-language"] || "";
+  if (acceptLang.toLowerCase().startsWith("ru")) {
+    return "ru";
+  }
+
+  // 3. IP Country (Vercel geo header) - FALLBACK
+  const country = req.headers?.["x-vercel-ip-country"] || "";
+  return getDefaultLocale(country);
 }
 
 function MyApp({ Component, pageProps, initialLocale }) {
@@ -57,10 +78,9 @@ function MyApp({ Component, pageProps, initialLocale }) {
   );
 }
 
-// Read locale cookie on server for initial render
+// Detect locale on server with Accept-Language + IP fallback
 MyApp.getInitialProps = async ({ ctx }) => {
-  const cookies = parseCookies(ctx.req?.headers?.cookie || "");
-  const initialLocale = cookies.locale || "en";
+  const initialLocale = detectLocale(ctx.req);
   return { initialLocale };
 };
 
