@@ -17,9 +17,9 @@ const ruCountries = [
 export function middleware(request) {
   const response = NextResponse.next();
 
-  // Skip if user already has locale preference
+  // Skip if user already has locale preference (Next.js 12 returns string directly)
   const localeCookie = request.cookies.get("locale");
-  if (localeCookie?.value) {
+  if (localeCookie) {
     return response;
   }
 
@@ -27,12 +27,11 @@ export function middleware(request) {
   const country = request.headers.get("x-vercel-ip-country") || "";
   const detectedLocale = ruCountries.includes(country) ? "ru" : "en";
 
-  // Set cookie for future visits
-  response.cookies.set("locale", detectedLocale, {
-    maxAge: 60 * 60 * 24 * 365, // 1 year
-    path: "/",
-    sameSite: "lax",
-  });
+  // Set cookie using Set-Cookie header (Next.js 12 compatible)
+  response.headers.set(
+    "Set-Cookie",
+    `locale=${detectedLocale}; Path=/; Max-Age=31536000; SameSite=Lax`,
+  );
 
   return response;
 }
