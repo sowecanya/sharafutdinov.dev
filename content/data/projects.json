@@ -24,12 +24,12 @@
     {
       "id": "portfolio",
       "title": {
-        "en": "sharafutdinov.dev",
-        "ru": "sharafutdinov.dev"
+        "en": "sharafutdinov.online",
+        "ru": "sharafutdinov.online"
       },
       "description": {
-        "en": "Personal portfolio website with modern stack and AI-assisted development pipeline. Features: i18n, dark mode, responsive design.",
-        "ru": "Персональный сайт-портфолио с современным стеком и AI-пайплайном разработки. Фичи: i18n, тёмная тема, адаптивный дизайн."
+        "en": "This website! Personal portfolio with AI-assisted development. Features: i18n (RU/EN), dark mode, responsive design, Russian proxy for accessibility.",
+        "ru": "Этот сайт! Персональное портфолио с AI-разработкой. Фичи: i18n (RU/EN), тёмная тема, адаптивный дизайн, российский прокси для доступности."
       },
       "image": "",
       "type": {
@@ -44,11 +44,12 @@
         "Framer Motion",
         "CSS Modules",
         "Claude Code",
-        "Vercel"
+        "Vercel",
+        "nginx"
       ],
-      "url": "https://github.com/sowecanya/sharafutdinov.dev",
+      "url": "https://sharafutdinov.online",
       "internal": false,
-      "status": "active"
+      "status": "completed"
     },
     {
       "id": "awardybot",
