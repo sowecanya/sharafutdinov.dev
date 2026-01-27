@@ -10,12 +10,23 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { LanguageProvider } from "../lib/i18n";
 import { personSchema, websiteSchema } from "../components/SEO";
 
-function MyApp({ Component, pageProps }) {
-  // Get initial locale from Vercel geo header (passed via pageProps) or default to 'en'
-  const initialLocale = pageProps.initialLocale || "en";
+// Helper to parse cookies from string
+function parseCookies(cookieString) {
+  const cookies = {};
+  if (!cookieString) return cookies;
+  cookieString.split(";").forEach((cookie) => {
+    const [name, value] = cookie.split("=").map((c) => c.trim());
+    if (name && value) cookies[name] = value;
+  });
+  return cookies;
+}
+
+function MyApp({ Component, pageProps, initialLocale }) {
+  // Use initialLocale from getInitialProps (SSR) or fallback to 'en'
+  const locale = initialLocale || "en";
 
   return (
-    <LanguageProvider initialLocale={initialLocale}>
+    <LanguageProvider initialLocale={locale}>
       <ThemeProvider attribute="class" value={{ dark: "dark-theme" }}>
         <Head>
           <script
@@ -45,5 +56,12 @@ function MyApp({ Component, pageProps }) {
     </LanguageProvider>
   );
 }
+
+// Read locale cookie on server for initial render
+MyApp.getInitialProps = async ({ ctx }) => {
+  const cookies = parseCookies(ctx.req?.headers?.cookie || "");
+  const initialLocale = cookies.locale || "en";
+  return { initialLocale };
+};
 
 export default MyApp;
