@@ -19,7 +19,7 @@
       "stack": ["Python", "Claude API", "LangGraph", "FastAPI", "Exa", "Redis"],
       "url": "https://github.com/sowecanya/startup-agents",
       "internal": false,
-      "status": "active"
+      "status": "paused"
     },
     {
       "id": "portfolio",
@@ -77,7 +77,8 @@
       ],
       "url": "",
       "internal": false,
-      "status": "active"
+      "status": "active",
+      "hidden": true
     },
     {
       "id": "dstools",

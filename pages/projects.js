@@ -23,16 +23,18 @@ export default function Projects() {
     return () => thisPage.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Group projects by year, sorted descending
+  // Group projects by year, sorted descending (excluding hidden)
   const projectsByYear = useMemo(() => {
     const groups = {};
-    projectsData.items.forEach((project) => {
-      const year = new Date(project.date).getFullYear();
-      if (!groups[year]) {
-        groups[year] = [];
-      }
-      groups[year].push(project);
-    });
+    projectsData.items
+      .filter((project) => !project.hidden)
+      .forEach((project) => {
+        const year = new Date(project.date).getFullYear();
+        if (!groups[year]) {
+          groups[year] = [];
+        }
+        groups[year].push(project);
+      });
 
     const sortedYears = Object.keys(groups)
       .map(Number)
