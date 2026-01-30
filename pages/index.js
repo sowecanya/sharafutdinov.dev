@@ -50,9 +50,10 @@ function TypewriterText({ text }) {
 export default function Home() {
   const { t, localize, locale } = useTranslation();
 
-  // Get 3 most recent projects
+  // Get 3 most recent projects (excluding hidden)
   const recentProjects = useMemo(() => {
     return [...projectsData.items]
+      .filter((project) => !project.hidden)
       .sort((a, b) => new Date(b.date) - new Date(a.date))
       .slice(0, 3);
   }, []);
